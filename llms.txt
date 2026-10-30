@@ -1,0 +1,14 @@
+# ふりがな整備士 (Furigana Seibishi)
+
+> iPhone/iPad app for practicing past questions of Japan's national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2, grade 3). Furigana on every kanji, an explanation for every choice, and reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Built for foreign students and mechanics in Japan (e.g. Specified Skilled Worker visa holders) by a university teacher in mechanic education. Not endorsed by JASPA.
+
+Key facts (as of 2026-10-30):
+- Grades 2 and 3 switch to a single "comprehensive" (総合) written exam from 14 March 2027; grade 1 from March 2028 at the earliest.
+- Past questions included: grades 2/3 from October 2016 (H28.10) to October 2026 (R8.10); grade 1 from March 2017 to March 2026. Re-organized into the comprehensive exam's fields.
+- Free: one full practice set per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50). Full access: one-time purchase per grade (JPY 980 / 1,500 / 1,800). No subscription, no account, works offline.
+
+## Pages
+- [Top: what the app is, FAQ, 7 languages](https://nosunosukawa.github.io/seibisolo-site/)
+- [Guide: the change to the comprehensive exam (2027) and how to prepare](https://nosunosukawa.github.io/seibisolo-site/sogo.html)
+- [Support](https://nosunosukawa.github.io/seibisolo-site/support.html)
+- [Privacy policy](https://nosunosukawa.github.io/seibisolo-site/privacy.html)
