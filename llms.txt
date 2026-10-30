@@ -10,5 +10,9 @@ Key facts (as of 2026-10-30):
 ## Pages
 - [Top: what the app is, FAQ, 7 languages](https://nosunosukawa.github.io/seibisolo-site/)
 - [Guide: the change to the comprehensive exam (2027) and how to prepare](https://nosunosukawa.github.io/seibisolo-site/sogo.html)
+- [Sample questions, grade 2 (furigana, answer, explanation, 7 translations)](https://nosunosukawa.github.io/seibisolo-site/sample-k2.html)
+- [Sample questions, grade 3](https://nosunosukawa.github.io/seibisolo-site/sample-k3.html)
+- [Sample questions, grade 1](https://nosunosukawa.github.io/seibisolo-site/sample-k1.html)
+- [Screenshots (iPhone and iPad)](https://nosunosukawa.github.io/seibisolo-site/screens.html)
 - [Support](https://nosunosukawa.github.io/seibisolo-site/support.html)
 - [Privacy policy](https://nosunosukawa.github.io/seibisolo-site/privacy.html)

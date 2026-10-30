@@ -12,7 +12,7 @@
   header{background:var(--band);color:var(--bandink);padding:18px 16px}
   header .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
   .brand{font-weight:900;font-size:21px;color:var(--bandink);text-decoration:none}
-  nav{margin-left:auto;display:flex;gap:14px;font-size:15px}
+  nav{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:15px}nav a{white-space:nowrap}
   nav a{color:var(--bandink)}
   main{max-width:760px;margin:0 auto;padding:28px 16px 48px}
   h1{font-size:27px;line-height:1.35;margin:0 0 8px}
@@ -26,6 +26,9 @@
   a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
   footer{max-width:760px;margin:0 auto;padding:20px 16px 40px;color:var(--soft);font-size:14px;border-top:1px solid var(--rule)}
   .en{margin-top:40px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0}
+  figure{margin:0}figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--rule);display:block}
+  figcaption{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.5}
 </style>
 <title>ふりがな整備士｜外国人も学べる自動車整備士1・2・3級の過去問アプリ（ふりがな・7か国語の訳）</title>
 <meta name="description" content="自動車整備士の国家試験（1級小型・2級・3級の学科）の過去問を、選択肢ごとの解説つきで解けるiPhone・iPadアプリ。すべての漢字にふりがな、問題文と解説に英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語の参考訳。2027年3月からの「総合」試験の分野に並べ直して収録。">
@@ -49,7 +52,7 @@
 </script>
 </head>
 <body>
-<header><div class="in"><a class="brand" href="index.html">ふりがな整備士</a><nav><a href="index.html">トップ</a><a href="sogo.html">総合の試験</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></nav></div></header>
+<header><div class="in"><a class="brand" href="index.html">ふりがな整備士</a><nav><a href="index.html">トップ</a><a href="sogo.html">総合の試験</a><a href="sample-k2.html">問題の例</a><a href="screens.html">画面</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></nav></div></header>
 <main>
 <h1>ふりがな整備士</h1>
 <p class="lead">外国人の整備士・留学生も、日本語の自動車整備士試験を勉強できる過去問アプリです。</p>
@@ -66,6 +69,18 @@
 <li><b>ネット不要・アカウント不要</b>: 記録は端末と、使う設定のときはご本人の iCloud に保存。</li>
 </ul>
 <p>訳と解説は AI で下書きし、人が問題用紙と照合した参考です。意味が違うときは、日本語の問題文が正しいものです。</p>
+
+<h2>画面</h2>
+<div class="grid">
+<figure><img src="img/real-home.jpg" alt="ふりがな整備士のホーム画面。総合の予想問題40問" loading="lazy" width="600"><figcaption>ホーム</figcaption></figure>
+<figure><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" loading="lazy" width="600"><figcaption>ふりがなつきの問題</figcaption></figure>
+<figure><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" loading="lazy" width="600"><figcaption>問題文の訳（ベトナム語）</figcaption></figure>
+</div>
+<p><a href="screens.html">画面をもっと見る（14枚）</a></p>
+
+<h2>実際の問題を見る</h2>
+<p>アプリに入っている問題を、ふりがな・正解・選択肢ごとの解説・訳つきで公開しています。</p>
+<ul><li><a href="sample-k2.html">2級の過去問の例（6問）</a></li><li><a href="sample-k3.html">3級の過去問の例（4問）</a></li><li><a href="sample-k1.html">1級の過去問の例（4問）</a></li></ul>
 
 <h2>だれが作ったか</h2>
 <p>日本の大学で自動車整備士の教育に携わっている教員（川﨑 信隆）が、日本語だけで行われる国家試験を目指す外国人の留学生・整備士（特定技能など）のために作りました。日本人の受験者にも、ふりがなの切り替え・文字の大きさ・弱点の復習が使えます。</p>
