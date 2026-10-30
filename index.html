@@ -29,6 +29,18 @@
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0}
   figure{margin:0}figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--rule);display:block}
   figcaption{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.5}
+  .hero .lead{font-size:20px;line-height:1.6}
+  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
+  .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
+  .btn.off{background:var(--soft);color:var(--paper)}
+  .btn.on{background:var(--accent);color:#fff}
+  .btn.ghost{border:2px solid var(--accent);color:var(--accent)}
+  .heroimg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 4px}
+  .heroimg img{width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
+  .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+  .card{display:block;border:1px solid var(--rule);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
+  .card b{display:block;color:var(--accent);font-size:17px}.card span{font-size:15px;color:var(--soft)}
+  .langs li{list-style:none;margin-left:-1.3em}
 </style>
 <title>ふりがな整備士｜外国人も学べる自動車整備士1・2・3級の過去問アプリ（ふりがな・7か国語の訳）</title>
 <meta name="description" content="自動車整備士の国家試験（1級小型・2級・3級の学科）の過去問を、選択肢ごとの解説つきで解けるiPhone・iPadアプリ。すべての漢字にふりがな、問題文と解説に英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語の参考訳。2027年3月からの「総合」試験の分野に並べ直して収録。">
@@ -54,9 +66,54 @@
 <body>
 <header><div class="in"><a class="brand" href="index.html">ふりがな整備士</a><nav><a href="index.html">トップ</a><a href="sogo.html">総合の試験</a><a href="sample-k2.html">問題の例</a><a href="screens.html">画面</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></nav></div></header>
 <main>
+<section class="hero">
 <h1>ふりがな整備士</h1>
-<p class="lead">外国人の整備士・留学生も、日本語の自動車整備士試験を勉強できる過去問アプリです。</p>
-<p class="meta">iPhone・iPad（iOS 16.4 以上）。ホーム画面では「整備士過去問」と表示されます。最終更新 2026年10月30日。</p>
+<p class="lead">日本語の自動車整備士試験を、ふりがなと母国語の訳で。<br>1・2・3級の過去問と、選択肢ごとの解説。</p>
+<p class="cta"><span class="btn off" aria-disabled="true">App Store で近日公開</span><a class="btn ghost" href="sample-k2.html">実際の問題を見る</a></p>
+<p class="meta">iPhone・iPad（iOS 16.4 以上）。級ごとに本番1回分の「総合の予想問題」は無料で全部解けます。ホーム画面では「整備士過去問」と表示されます。</p>
+<div class="heroimg"><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" width="600"><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" width="600"><img src="img/shot-02-explanation.jpg" alt="選択肢ごとの解説" width="600"></div>
+</section>
+
+<h2>あなたはどれ？</h2>
+<div class="who">
+<a class="card" href="#foreign"><b>外国人の受験者</b><span>留学生・特定技能の整備士。日本語の問題を、ふりがなと7か国語の訳で読めます。</span></a>
+<a class="card" href="#japanese"><b>日本人の受験者</b><span>整備学校の学生・現場の整備士。総合の分野で過去問を解き、弱点を復習できます。</span></a>
+<a class="card" href="#schools"><b>学校・会社の先生</b><span>外国人の学生・社員の指導に。まとめての利用はご相談ください。</span></a>
+</div>
+
+<h2 id="free">まず無料で、本番1回分</h2>
+<p>級ごとの「総合の予想問題」（2級40問・3級30問・1級50問）は、買わなくても全部解けます。解いて、解説を読んで、訳を確かめて、まちがえた問題を復習するところまで、全部試せます。気に入ったら級ごとの買い切り（3級980円・2級1,500円・1級1,800円）。サブスクリプションはありません。</p>
+
+<h2>実際の問題を見る</h2>
+<p>アプリに入っている問題を、ふりがな・正解・選択肢ごとの解説・訳つきでそのまま公開しています。</p>
+<ul><li><a href="sample-k2.html">2級の過去問の例（6問）</a></li><li><a href="sample-k3.html">3級の過去問の例（4問）</a></li><li><a href="sample-k1.html">1級の過去問の例（4問）</a></li></ul>
+
+<h2>画面</h2>
+<div class="grid">
+<figure><img src="img/real-home.jpg" alt="ふりがな整備士のホーム画面。総合の予想問題40問" loading="lazy" width="600"><figcaption>ホーム</figcaption></figure>
+<figure><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" loading="lazy" width="600"><figcaption>ふりがなつきの問題</figcaption></figure>
+<figure><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" loading="lazy" width="600"><figcaption>問題文の訳（ベトナム語）</figcaption></figure>
+</div>
+<p><a href="screens.html">画面をもっと見る（14枚）</a></p>
+
+
+<h2 id="foreign">外国人の受験者へ</h2>
+<p>試験は日本語だけです。このアプリは、すべての漢字にふりがなを付け、問題文と解説に参考の訳を付けています。訳で意味をつかんだら、最後は日本語の問題文で解けるように練習します。問題ごとに専門用語の訳も出ます。</p>
+<ul class="langs">
+<li lang="en">English — Past exam questions with furigana, explanations and English translations.</li>
+<li lang="ne">नेपाली — फुरिगाना, व्याख्या र नेपाली अनुवादसहित पुराना प्रश्नहरू।</li>
+<li lang="zh">中文 — 历年真题，附注音假名、解析和中文译文。</li>
+<li lang="si">සිංහල — ෆුරිගනා, පැහැදිලි කිරීම් සහ සිංහල පරිවර්තන සමඟ පැරණි ප්‍රශ්න.</li>
+<li lang="vi">Tiếng Việt — Đề thi các năm có furigana, giải thích và bản dịch tiếng Việt.</li>
+<li lang="my">မြန်မာ — ဖူရီဂါနာ၊ ရှင်းလင်းချက်နှင့် မြန်မာဘာသာပြန်ပါသော ယခင်မေးခွန်းများ။</li>
+<li lang="id">Bahasa Indonesia — Soal ujian tahun lalu dengan furigana, penjelasan dan terjemahan bahasa Indonesia.</li>
+</ul>
+
+<h2 id="japanese">日本人の受験者へ</h2>
+<p>2027年3月から2級・3級は「総合」の試験になります。このアプリは、これまでの過去問を総合の分野に並べ直してあるので、ガソリン・ジーゼルを分けずに勉強できます。ふりがなは消せます。文字の大きさ、苦手な問題の復習、本番の形の模擬試験もあります。くわしくは <a href="sogo.html">総合の試験への変更と勉強のしかた</a>。</p>
+
+<h2 id="schools">学校・会社の先生へ</h2>
+<p>外国人の留学生・社員の指導にお使いください。まとめての導入や、授業での使い方のご相談は <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a> へどうぞ。</p>
 
 <h2>要点</h2>
 <ul>
@@ -69,18 +126,6 @@
 <li><b>ネット不要・アカウント不要</b>: 記録は端末と、使う設定のときはご本人の iCloud に保存。</li>
 </ul>
 <p>訳と解説は AI で下書きし、人が問題用紙と照合した参考です。意味が違うときは、日本語の問題文が正しいものです。</p>
-
-<h2>画面</h2>
-<div class="grid">
-<figure><img src="img/real-home.jpg" alt="ふりがな整備士のホーム画面。総合の予想問題40問" loading="lazy" width="600"><figcaption>ホーム</figcaption></figure>
-<figure><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" loading="lazy" width="600"><figcaption>ふりがなつきの問題</figcaption></figure>
-<figure><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" loading="lazy" width="600"><figcaption>問題文の訳（ベトナム語）</figcaption></figure>
-</div>
-<p><a href="screens.html">画面をもっと見る（14枚）</a></p>
-
-<h2>実際の問題を見る</h2>
-<p>アプリに入っている問題を、ふりがな・正解・選択肢ごとの解説・訳つきで公開しています。</p>
-<ul><li><a href="sample-k2.html">2級の過去問の例（6問）</a></li><li><a href="sample-k3.html">3級の過去問の例（4問）</a></li><li><a href="sample-k1.html">1級の過去問の例（4問）</a></li></ul>
 
 <h2>だれが作ったか</h2>
 <p>日本の大学で自動車整備士の教育に携わっている教員（川﨑 信隆）が、日本語だけで行われる国家試験を目指す外国人の留学生・整備士（特定技能など）のために作りました。日本人の受験者にも、ふりがなの切り替え・文字の大きさ・弱点の復習が使えます。</p>
@@ -98,14 +143,6 @@
 
 <section class="en" lang="en"><h2>English</h2>
 <p><b>Furigana Seibishi</b> is an iPhone and iPad app for foreign students and mechanics in Japan preparing for the national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2 and grade 3). It contains past exam questions with an explanation for every choice, furigana on every kanji, and reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Questions are re-organized into the fields of the new comprehensive ("総合") exam that starts in March 2027. One full practice set per grade is free. Made by a university teacher in mechanic education; not endorsed by JASPA.</p></section>
-<section class="en"><h2>Other languages</h2>
-<p lang="ne">नेपाली: जापानको अटोमोबाइल मेकानिक राष्ट्रिय परीक्षा (१, २, ३ ग्रेड) का पुराना प्रश्नहरू, फुरिगाना र नेपाली अनुवादसहित अभ्यास गर्ने iPhone एप।</p>
-<p lang="zh">中文：日本汽车维修技师国家考试（1・2・3级）历年真题练习 App，所有汉字注音假名，附中文参考译文和逐项解析。</p>
-<p lang="si">සිංහල: ජපානයේ මෝටර් රථ කාර්මික ජාතික විභාගයේ (1, 2, 3 ශ්‍රේණි) පැරණි ප්‍රශ්න, ෆුරිගනා සහ සිංහල පරිවර්තන සමඟ පුහුණු වීමට iPhone යෙදුමක්.</p>
-<p lang="vi">Tiếng Việt: Ứng dụng iPhone luyện đề thi quốc gia thợ sửa chữa ô tô Nhật Bản (cấp 1, 2, 3), có furigana cho mọi chữ Hán và bản dịch tiếng Việt tham khảo.</p>
-<p lang="my">မြန်မာ: ဂျပန်နိုင်ငံ မော်တော်ယာဉ် စက်ပြင် အမျိုးသား စာမေးပွဲ (အဆင့် ၁၊ ၂၊ ၃) ၏ ယခင်မေးခွန်းများကို ဖူရီဂါနာနှင့် မြန်မာဘာသာပြန်ဖြင့် လေ့ကျင့်နိုင်သော iPhone အက်ပ်။</p>
-<p lang="id">Bahasa Indonesia: Aplikasi iPhone untuk latihan soal ujian nasional mekanik otomotif Jepang (tingkat 1, 2, 3), dengan furigana di semua kanji dan terjemahan bahasa Indonesia sebagai referensi.</p>
-</section>
 </main>
 <footer>© 2026 のす工房（Nosu Works）・ お問い合わせ: <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a><br>このアプリは個人が作成したもので、一般社団法人 日本自動車整備振興会連合会（日整連）の公認・監修を受けたものではありません。</footer>
 </body>
