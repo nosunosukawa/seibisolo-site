@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ふりがな整備士 テスト版の入れ方（iPhone）</title>
+<meta name="description" content="自動車整備士の国家試験の過去問アプリ「ふりがな整備士」のテスト版（TestFlight）を iPhone に入れる手順。7か国語で案内。">
+<!-- 2026-11-02 X 広告（日本にいる留学生向け）から来た人が、TestFlight を入れてテストに参加するまでを1枚で案内する。言語は端末の言語で自動に選び、上の札で切り替えられる -->
+<style>
+  :root{color-scheme:light dark;--paper:#F6F4F1;--ink:#1F1A17;--soft:#6B625C;--rule:#E2DDD8;--accent:#1F7A6D;--band:#123F39;--bandink:#F2FBF8;--card:#FFFFFF}
+  @media (prefers-color-scheme: dark){:root{--paper:#121614;--ink:#ECF2EF;--soft:#A3ADA8;--rule:#2E3833;--accent:#5CC9B4;--band:#0C2B27;--card:#1A201D}}
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;background:var(--paper)}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans","Noto Sans Devanagari","Noto Sans Myanmar","Noto Sans Sinhala",sans-serif;font-size:17px;line-height:1.7}
+  header{background:var(--band);color:var(--bandink);padding:18px 16px}
+  header .in{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:12px}
+  header img{width:52px;height:52px;border-radius:12px}
+  header b{font-size:20px}
+  main{max-width:640px;margin:0 auto;padding:18px 16px 48px}
+  .langs{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 18px}
+  .langs button{font:inherit;font-size:15px;padding:6px 12px;border-radius:999px;border:1px solid var(--rule);background:var(--card);color:var(--ink);cursor:pointer}
+  .langs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:700}
+  h1{font-size:24px;line-height:1.4;margin:0 0 6px}
+  .lead{color:var(--soft);margin:0 0 16px}
+  ol{list-style:none;padding:0;margin:0;counter-reset:s}
+  ol li{counter-increment:s;background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:16px 16px 16px 60px;margin:0 0 12px;position:relative}
+  ol li::before{content:counter(s);position:absolute;left:16px;top:16px;width:30px;height:30px;border-radius:50%;background:var(--accent);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .btn{display:inline-block;margin-top:10px;padding:12px 18px;border-radius:12px;background:var(--accent);color:#fff;font-weight:800;text-decoration:none}
+  .note{background:var(--card);border-left:4px solid var(--accent);padding:10px 14px;border-radius:8px;margin:16px 0;font-size:15px}
+  .soft{color:var(--soft);font-size:14px}
+  footer{max-width:640px;margin:0 auto;padding:16px 16px 40px;color:var(--soft);font-size:13px;border-top:1px solid var(--rule)}
+  a{color:var(--accent)}
+  [data-l]{display:none}
+  [data-l].on{display:block}
+</style>
+</head>
+<body>
+<header><div class="in"><img src="img/icon.png" alt="" onerror="this.remove()"><b>ふりがな整備士</b></div></header>
+<main>
+  <div class="langs" role="group" aria-label="Language">
+    <button data-k="ja">日本語</button><button data-k="en">English</button><button data-k="ne">नेपाली</button><button data-k="vi">Tiếng Việt</button>
+    <button data-k="my">မြန်မာ</button><button data-k="id">Indonesia</button><button data-k="si">සිංහල</button><button data-k="zh">中文</button>
+  </div>
+
+  <section data-l="ja" lang="ja">
+    <h1>テスト版を iPhone に入れる</h1>
+    <p class="lead">整備士の国家試験の過去問アプリ。すべての漢字にふりがな、7か国語の訳と解説つき。いまは無料のテスト版です。</p>
+    <ol>
+      <li><b>TestFlight を入れる</b><br>Apple のテスト用アプリです（無料）。<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">App Store で TestFlight を入れる</a></li>
+      <li><b>テストに参加する</b><br>下のボタンを押して「受け入れる」→「インストール」。<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">ふりがな整備士のテストに参加</a></li>
+      <li><b>アプリを開いて、ことばを選ぶ</b><br>最初に母国語を選ぶと、ふりがなと訳が出ます。</li>
+      <li><b>わかりにくい訳を知らせる</b><br>訳の下の「この訳がわかりにくい」を押すと、メールで知らせられます。母国語で書いて大丈夫です。</li>
+    </ol>
+    <p class="note">Android の人へ: Android 版は準備中です。もう少し待ってください。</p>
+    <p class="soft">テスト版は先着100人です。テストで集めるのは、あなたが送ったメールの内容だけです。学習の記録は端末の外に出しません。</p>
+  </section>
+
+  <section data-l="en" lang="en">
+    <h1>Install the test version on your iPhone</h1>
+    <p class="lead">A past-exam app for Japan's auto mechanic national exam. Furigana on every kanji, with translations and explanations in 7 languages. The test version is free.</p>
+    <ol>
+      <li><b>Get TestFlight</b><br>Apple's free app for testing apps.<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">Get TestFlight on the App Store</a></li>
+      <li><b>Join the test</b><br>Tap the button, then "Accept" → "Install".<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">Join the Furigana Seibishi test</a></li>
+      <li><b>Open the app and choose your language</b><br>Pick your language first to see furigana and translations.</li>
+      <li><b>Tell us about unclear translations</b><br>Tap "この訳がわかりにくい" under a translation to send us an email. You can write in your own language.</li>
+    </ol>
+    <p class="note">Android users: the Android version is coming soon.</p>
+    <p class="soft">First 100 testers. We only receive the emails you choose to send. Your study records stay on your device.</p>
+  </section>
+
+  <section data-l="ne" lang="ne">
+    <h1>iPhone मा टेस्ट संस्करण राख्नुहोस्</h1>
+    <p class="lead">जापानको अटोमोबाइल मेकानिक राष्ट्रिय परीक्षाका पुराना प्रश्नहरूको एप। सबै कान्जीमा फुरिगाना, ७ भाषामा अनुवाद र व्याख्या। टेस्ट संस्करण निःशुल्क छ।</p>
+    <ol>
+      <li><b>TestFlight राख्नुहोस्</b><br>एप परीक्षणका लागि Apple को निःशुल्क एप।<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">App Store बाट TestFlight</a></li>
+      <li><b>टेस्टमा सामेल हुनुहोस्</b><br>तलको बटन थिच्नुहोस्, अनि "Accept" → "Install"।<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">टेस्टमा सामेल हुनुहोस्</a></li>
+      <li><b>एप खोलेर आफ्नो भाषा छान्नुहोस्</b><br>पहिले भाषा छानेपछि फुरिगाना र अनुवाद देखिन्छ।</li>
+      <li><b>बुझ्न गाह्रो अनुवाद बताउनुहोस्</b><br>अनुवादमुनिको बटन थिचेर इमेल पठाउन सकिन्छ। नेपालीमै लेखे हुन्छ।</li>
+    </ol>
+    <p class="note">Android प्रयोगकर्ता: Android संस्करण छिट्टै आउँदैछ।</p>
+    <p class="soft">पहिलो १०० जनासम्म। तपाईंले पठाएको इमेल मात्र हामीकहाँ आउँछ। अध्ययन रेकर्ड फोनबाहिर जाँदैन।</p>
+  </section>
+
+  <section data-l="vi" lang="vi">
+    <h1>Cài bản thử nghiệm trên iPhone</h1>
+    <p class="lead">Ứng dụng đề thi cũ kỳ thi quốc gia thợ bảo dưỡng ô tô Nhật Bản. Có furigana cho mọi chữ Hán, kèm bản dịch và giải thích 7 ngôn ngữ. Bản thử nghiệm miễn phí.</p>
+    <ol>
+      <li><b>Cài TestFlight</b><br>Ứng dụng miễn phí của Apple để dùng thử ứng dụng.<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">Tải TestFlight trên App Store</a></li>
+      <li><b>Tham gia thử nghiệm</b><br>Bấm nút bên dưới, rồi "Accept" → "Install".<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">Tham gia thử nghiệm</a></li>
+      <li><b>Mở ứng dụng và chọn ngôn ngữ</b><br>Chọn tiếng Việt trước để xem furigana và bản dịch.</li>
+      <li><b>Báo bản dịch khó hiểu</b><br>Bấm nút dưới bản dịch để gửi email cho chúng tôi. Bạn có thể viết bằng tiếng Việt.</li>
+    </ol>
+    <p class="note">Người dùng Android: bản Android sắp ra mắt.</p>
+    <p class="soft">100 người đầu tiên. Chúng tôi chỉ nhận email bạn tự gửi. Dữ liệu học tập ở lại trên máy của bạn.</p>
+  </section>
+
+  <section data-l="my" lang="my">
+    <h1>iPhone တွင် စမ်းသပ်ဗားရှင်း ထည့်ရန်</h1>
+    <p class="lead">ဂျပန် မော်တော်ယာဉ်ပြုပြင်ရေး နိုင်ငံတော်စာမေးပွဲ မေးခွန်းဟောင်းများ အက်ပ်။ ခန်းဂျိအားလုံးတွင် ဖူရီဂါနာ၊ ဘာသာ ၇ မျိုးဖြင့် ဘာသာပြန်နှင့် ရှင်းလင်းချက်။ စမ်းသပ်ဗားရှင်းသည် အခမဲ့ဖြစ်သည်။</p>
+    <ol>
+      <li><b>TestFlight ထည့်ပါ</b><br>အက်ပ်စမ်းသပ်ရန် Apple ၏ အခမဲ့အက်ပ်။<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">App Store မှ TestFlight</a></li>
+      <li><b>စမ်းသပ်မှုတွင် ပါဝင်ပါ</b><br>အောက်ပါခလုတ်ကို နှိပ်ပြီး "Accept" → "Install"။<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">စမ်းသပ်မှုတွင် ပါဝင်ရန်</a></li>
+      <li><b>အက်ပ်ဖွင့်ပြီး ဘာသာစကား ရွေးပါ</b><br>ဦးစွာ ဘာသာစကားရွေးလျှင် ဖူရီဂါနာနှင့် ဘာသာပြန် ပေါ်လာမည်။</li>
+      <li><b>နားမလည်သော ဘာသာပြန်ကို အသိပေးပါ</b><br>ဘာသာပြန်အောက်ရှိ ခလုတ်ကိုနှိပ်၍ အီးမေးလ် ပို့နိုင်သည်။ မြန်မာလို ရေးနိုင်သည်။</li>
+    </ol>
+    <p class="note">Android အသုံးပြုသူများ: Android ဗားရှင်း မကြာမီ ထွက်မည်။</p>
+    <p class="soft">ပထမ ၁၀၀ ဦးအထိ။ သင်ပို့သော အီးမေးလ်ကိုသာ ကျွန်ုပ်တို့ ရရှိသည်။ လေ့လာမှုမှတ်တမ်းများ ဖုန်းအပြင်သို့ မထွက်ပါ။</p>
+  </section>
+
+  <section data-l="id" lang="id">
+    <h1>Pasang versi uji di iPhone</h1>
+    <p class="lead">Aplikasi soal ujian lama untuk ujian nasional mekanik otomotif Jepang. Furigana pada semua kanji, dengan terjemahan dan penjelasan dalam 7 bahasa. Versi uji gratis.</p>
+    <ol>
+      <li><b>Pasang TestFlight</b><br>Aplikasi gratis dari Apple untuk menguji aplikasi.<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">TestFlight di App Store</a></li>
+      <li><b>Ikut pengujian</b><br>Ketuk tombol di bawah, lalu "Accept" → "Install".<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">Ikut pengujian</a></li>
+      <li><b>Buka aplikasi dan pilih bahasa</b><br>Pilih bahasa Anda dulu untuk melihat furigana dan terjemahan.</li>
+      <li><b>Laporkan terjemahan yang sulit dipahami</b><br>Ketuk tombol di bawah terjemahan untuk mengirim email. Boleh menulis dalam bahasa Indonesia.</li>
+    </ol>
+    <p class="note">Pengguna Android: versi Android segera hadir.</p>
+    <p class="soft">100 penguji pertama. Kami hanya menerima email yang Anda kirim sendiri. Catatan belajar tetap di perangkat Anda.</p>
+  </section>
+
+  <section data-l="si" lang="si">
+    <h1>iPhone එකට පරීක්ෂණ අනුවාදය දමන්න</h1>
+    <p class="lead">ජපානයේ මෝටර් රථ කාර්මික ජාතික විභාගයේ පැරණි ප්‍රශ්න යෙදුම. සියලු කන්ජිවලට ෆුරිගානා, භාෂා 7කින් පරිවර්තන සහ පැහැදිලි කිරීම්. පරීක්ෂණ අනුවාදය නොමිලේ.</p>
+    <ol>
+      <li><b>TestFlight දමන්න</b><br>යෙදුම් පරීක්ෂාවට Apple හි නොමිලේ යෙදුම.<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">App Store හි TestFlight</a></li>
+      <li><b>පරීක්ෂණයට එක්වන්න</b><br>පහත බොත්තම ඔබා "Accept" → "Install".<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">පරීක්ෂණයට එක්වන්න</a></li>
+      <li><b>යෙදුම විවෘත කර භාෂාව තෝරන්න</b><br>පළමුව භාෂාව තේරූ විට ෆුරිගානා සහ පරිවර්තන පෙනේ.</li>
+      <li><b>අපැහැදිලි පරිවර්තන දන්වන්න</b><br>පරිවර්තනය යට බොත්තම ඔබා ඊමේල් යැවිය හැක. සිංහලෙන් ලිවිය හැක.</li>
+    </ol>
+    <p class="note">Android භාවිතා කරන්නන්: Android අනුවාදය ළඟදීම.</p>
+    <p class="soft">පළමු 100 දෙනාට. ඔබ යවන ඊමේල් පමණක් අපට ලැබේ. ඉගෙනුම් වාර්තා දුරකථනයෙන් පිටතට නොයයි.</p>
+  </section>
+
+  <section data-l="zh" lang="zh">
+    <h1>在 iPhone 上安装测试版</h1>
+    <p class="lead">日本汽车维修国家考试真题应用。所有汉字附注音，附7种语言的译文和解析。测试版免费。</p>
+    <ol>
+      <li><b>安装 TestFlight</b><br>Apple 的免费测试应用。<br><a class="btn" href="https://apps.apple.com/app/testflight/id899247664">在 App Store 获取 TestFlight</a></li>
+      <li><b>加入测试</b><br>点击下面的按钮，然后“Accept”→“Install”。<br><a class="btn" href="https://testflight.apple.com/join/UdkCMKV6">加入测试</a></li>
+      <li><b>打开应用并选择语言</b><br>先选择中文，就会显示注音和译文。</li>
+      <li><b>反馈难懂的译文</b><br>点击译文下方的按钮即可发邮件给我们，可以用中文写。</li>
+    </ol>
+    <p class="note">Android 用户：Android 版即将推出。</p>
+    <p class="soft">限前100名。我们只会收到你主动发送的邮件。学习记录不会离开你的手机。</p>
+  </section>
+</main>
+<footer>のす工房（Nosu Works）・<a href="./">ふりがな整備士</a>・<a href="privacy.html">プライバシー</a>・<a href="support.html">サポート</a><br>本アプリは個人が作成したもので、日整連の公認・監修を受けたものではありません。TestFlight and App Store are trademarks of Apple Inc.</footer>
+<script>
+  const pick = (k) => {
+    document.querySelectorAll('[data-l]').forEach((s) => s.classList.toggle('on', s.dataset.l === k));
+    document.querySelectorAll('.langs button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.k === k)));
+    document.documentElement.lang = k;
+  };
+  document.querySelectorAll('.langs button').forEach((b) => b.addEventListener('click', () => pick(b.dataset.k)));
+  const q = new URLSearchParams(location.search).get('lang');
+  const nav = (navigator.language || 'ja').toLowerCase();
+  const map = { ja: 'ja', en: 'en', ne: 'ne', vi: 'vi', my: 'my', id: 'id', in: 'id', si: 'si', zh: 'zh' };
+  pick(map[q] || map[nav.slice(0, 2)] || 'en');
+</script>
+</body>
+</html>
