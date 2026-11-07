@@ -5,6 +5,7 @@
 Key facts (as of 2026-11-07):
 - Grades 2 and 3 switch to a single "comprehensive" (総合) written exam from 14 March 2027; grade 1 from March 2028 at the earliest.
 - There are no past comprehensive exam questions yet. The app re-organizes earlier past questions into the comprehensive exam's fields (engine, chassis, electronic control, equipment and basics, regulations).
+- Prepared for the comprehensive exam: a full-length practice set per grade in the exam format (grade 2: 40 questions/80 min, grade 3: 30/60 min, grade 1: 50/100 min) with a countdown; practice questions written from the new comprehensive textbooks for the newly added fields (e.g. electronic control), labeled as not real exam questions; the Pass Pack and explanations are checked against the new comprehensive textbooks. More practice questions will keep being added, and buyers of a grade get them at no extra cost.
 - Past questions included: grades 2/3 from October 2016 (H28.10) to October 2026 (R8.10); grade 1 from March 2017 to March 2026. Source: questions published by JASPA; questions, choices and answers checked against the question papers and answer sheets.
 - In October 2026 the developer asked JASPA in writing about offering the questions with furigana, translations and explanations in an app; JASPA replied that permission is not required. This is not an endorsement.
 - Translations and explanations are AI-generated references; the Japanese text prevails. Sinhala and Burmese cover only part of the grade 2 body/electrical questions.
