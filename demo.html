@@ -40,8 +40,10 @@ rt{font-size:.5em;font-weight:400;color:var(--ink-2)}
 .top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;gap:8px;min-height:52px}
 .back{color:var(--teal);font-weight:700;text-decoration:none;font-size:15px;min-height:44px;display:flex;align-items:center;white-space:nowrap}
-.top h1{flex:1;font-size:15px;margin:0;text-align:center;line-height:1.4}
-.count{font-size:14px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;min-width:3.2em;text-align:right}
+.top h1{flex:1;min-width:0;font-size:13px;margin:0;text-align:center;line-height:1.4}
+.top .timer{min-height:28px;padding:0 8px;font-size:13px;white-space:nowrap}
+.top .timer rt{display:none}
+.count{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap;min-width:3.2em;text-align:right}
 .bar{height:4px;background:var(--line)}
 .bar i{display:block;height:4px;background:var(--teal);width:0;transition:width .2s}
 /* 道具の行 */
@@ -128,15 +130,15 @@ footer p{margin:0 0 6px}
 <div class="top">
   <div class="wrap">
     <a class="back" href="./">‹ 戻る</a>
-    <h1>総合の予想問題（2級）から5問</h1>
+    <h1><span style="white-space:nowrap">総合の予想問題（2級）</span><span style="white-space:nowrap">から5問</span></h1>
     <span class="count" id="count">1 / 5</span>
+    <span class="timer" id="timer" role="timer" aria-label="試験時間の残り"><span><ruby>残<rt>のこ</rt></ruby>り <span id="clock">80:00</span></span></span>
   </div>
   <div class="bar"><i id="bar"></i></div>
 </div>
 
 <main class="wrap" id="quiz">
   <div class="tools">
-    <span class="timer" id="timer" role="timer" aria-label="試験時間の残り"><span><ruby>残<rt>のこ</rt></ruby>り <span id="clock">80:00</span></span></span>
     <button class="sw" id="rubyBtn" type="button" aria-pressed="true">ふりがな</button>
     <button class="sw" id="speakBtn" type="button" aria-pressed="false" hidden>読み上げ</button>
   </div>
