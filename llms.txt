@@ -1,14 +1,22 @@
 # ふりがな整備士 (Furigana Seibishi)
 
-> iPhone/iPad app for practicing past questions of Japan's national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2, grade 3). Furigana on every kanji, an explanation for every choice, and reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Built for foreign students and mechanics in Japan (e.g. Specified Skilled Worker visa holders) by a university teacher in mechanic education. Not endorsed by JASPA.
+> iPhone/iPad app for practicing past questions of Japan's national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2, grade 3). Questions stay in the original Japanese, with furigana on every kanji, an explanation for every choice, and AI-generated reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Built for foreign students and mechanics in Japan (e.g. Specified Skilled Worker visa holders) by an individual with experience teaching exam-prep classes at a mechanic school. Not endorsed or supervised by JASPA.
 
-Key facts (as of 2026-10-30):
+Key facts (as of 2026-11-07):
 - Grades 2 and 3 switch to a single "comprehensive" (総合) written exam from 14 March 2027; grade 1 from March 2028 at the earliest.
-- Past questions included: grades 2/3 from October 2016 (H28.10) to October 2026 (R8.10); grade 1 from March 2017 to March 2026. Re-organized into the comprehensive exam's fields.
-- Free: one full practice set per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50). Full access: one-time purchase per grade (JPY 980 / 1,500 / 1,800). No subscription, no account, works offline.
+- There are no past comprehensive exam questions yet. The app re-organizes earlier past questions into the comprehensive exam's fields (engine, chassis, electronic control, equipment and basics, regulations).
+- Past questions included: grades 2/3 from October 2016 (H28.10) to October 2026 (R8.10); grade 1 from March 2017 to March 2026. Source: questions published by JASPA; questions, choices and answers checked against the question papers and answer sheets.
+- In October 2026 the developer asked JASPA in writing about offering the questions with furigana, translations and explanations in an app; JASPA replied that permission is not required. This is not an endorsement.
+- Translations and explanations are AI-generated references; the Japanese text prevails. Sinhala and Burmese cover only part of the grade 2 body/electrical questions.
+- Free: one full "comprehensive practice set" per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50). Full access: one-time purchase per grade (JPY 980 grade 3 / 1,500 grade 2 / 1,800 grade 1). No subscription, no account, works offline, no personal data collected.
+- Pass Pack (frequently tested questions): grade 3 500, grade 2 600, grade 1 450 questions, served 20 at a time.
+- No guarantee of passing.
+- App Store: https://apps.apple.com/jp/app/id6827350748 (iOS 16.4 or later; home-screen name 「整備士過去問」).
 
 ## Pages
-- [Top: what the app is, FAQ, 7 languages](https://nosunosukawa.github.io/seibisolo-site/)
+- [Top (Japanese): what the app is, prices, FAQ](https://nosunosukawa.github.io/seibisolo-site/)
+- [English page](https://nosunosukawa.github.io/seibisolo-site/en.html)
+- [Try 5 questions in the browser (grade 2, furigana, 7 translations, explanations)](https://nosunosukawa.github.io/seibisolo-site/demo.html)
 - [Guide: the change to the comprehensive exam (2027) and how to prepare](https://nosunosukawa.github.io/seibisolo-site/sogo.html)
 - [Sample questions, grade 2 (furigana, answer, explanation, 7 translations)](https://nosunosukawa.github.io/seibisolo-site/sample-k2.html)
 - [Sample questions, grade 3](https://nosunosukawa.github.io/seibisolo-site/sample-k3.html)

@@ -1,149 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-  :root{color-scheme:light dark;--paper:#F6F4F1;--ink:#1F1A17;--soft:#6B625C;--rule:#E2DDD8;--accent:#C2410C;--band:#C2410C;--bandink:#FFF7F0}
-  @media (prefers-color-scheme: dark){:root{--paper:#171412;--ink:#F1ECE8;--soft:#ABA19A;--rule:#3A3430;--accent:#FB8A4F;--band:#7C2D12}}
-  *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%;background:var(--paper)}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN",-apple-system,BlinkMacSystemFont,"Noto Sans JP",sans-serif;font-size:17px;line-height:1.85;overflow-wrap:break-word;line-break:strict}
-  header{background:var(--band);color:var(--bandink);padding:18px 16px}
-  header .in{max-width:760px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .brand{font-weight:900;font-size:21px;color:var(--bandink);text-decoration:none}
-  nav{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:15px}nav a{white-space:nowrap}
-  nav a{color:var(--bandink)}
-  main{max-width:760px;margin:0 auto;padding:28px 16px 48px}
-  h1{font-size:27px;line-height:1.35;margin:0 0 8px}
-  h2{font-size:19px;margin:32px 0 6px;padding-top:14px;border-top:1px solid var(--rule)}
-  h3{font-size:17px;margin:20px 0 4px}
-  p,li{margin:.4em 0}
-  ul{padding-left:1.3em}
-  .lead{font-size:18px;font-weight:600}
-  .meta{color:var(--soft);font-size:14px}
-  a{color:var(--accent)}
-  a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
-  footer{max-width:760px;margin:0 auto;padding:20px 16px 40px;color:var(--soft);font-size:14px;border-top:1px solid var(--rule)}
-  .en{margin-top:40px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;margin:12px 0}
-  figure{margin:0}figure img{width:100%;height:auto;border-radius:14px;border:1px solid var(--rule);display:block}
-  figcaption{font-size:14px;color:var(--soft);margin-top:6px;line-height:1.5}
-  .hero .lead{font-size:20px;line-height:1.6}
-  .cta{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 6px}
-  .btn{display:inline-block;padding:12px 18px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px}
-  .btn.off{background:var(--soft);color:var(--paper)}
-  .btn.on{background:var(--accent);color:#fff}
-  .btn.ghost{border:2px solid var(--accent);color:var(--accent)}
-  .heroimg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0 4px}
-  .heroimg img{width:100%;height:auto;border-radius:14px;border:1px solid var(--rule)}
-  .who{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
-  .card{display:block;border:1px solid var(--rule);border-radius:12px;padding:12px 14px;text-decoration:none;color:var(--ink)}
-  .card b{display:block;color:var(--accent);font-size:17px}.card span{font-size:15px;color:var(--soft)}
-  .langs li{list-style:none;margin-left:-1.3em}
-</style>
 <title>ふりがな整備士｜外国人も学べる自動車整備士1・2・3級の過去問アプリ（ふりがな・7か国語の訳）</title>
 <meta name="description" content="自動車整備士の国家試験（1級小型・2級・3級の学科）の過去問を、選択肢ごとの解説つきで解けるiPhone・iPadアプリ。すべての漢字にふりがな、問題文と解説に英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語の参考訳。2027年3月からの「総合」試験の分野に並べ直して収録。">
 <link rel="canonical" href="https://nosunosukawa.github.io/seibisolo-site/">
+<link rel="alternate" hreflang="ja" href="https://nosunosukawa.github.io/seibisolo-site/">
+<link rel="alternate" hreflang="en" href="https://nosunosukawa.github.io/seibisolo-site/en.html">
+<link rel="alternate" hreflang="x-default" href="https://nosunosukawa.github.io/seibisolo-site/">
 <meta property="og:title" content="ふりがな整備士｜自動車整備士1・2・3級の過去問（ふりがな・7か国語の訳）">
 <meta property="og:description" content="外国人の整備士・留学生が、日本語の国家試験を勉強するためのiPhoneアプリ。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nosunosukawa.github.io/seibisolo-site/">
+<meta property="og:site_name" content="ふりがな整備士">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="apple-itunes-app" content="app-id=6827350748">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
-{"@type":"MobileApplication","@id":"https://nosunosukawa.github.io/seibisolo-site/#app","name":"ふりがな整備士","alternateName":["整備士過去問","Furigana Seibishi"],"operatingSystem":"iOS 16.4 or later","applicationCategory":"EducationalApplication","inLanguage":["ja","en","ne","zh","si","vi","my","id"],"description":"自動車整備士の国家試験（自動車整備技能登録試験の学科、1級小型・2級・3級）の過去問を、ふりがな・7か国語の参考訳・選択肢ごとの解説つきで練習できるiPhone・iPadアプリ。","audience":{"@type":"EducationalAudience","educationalRole":"student","audienceType":"自動車整備士の受験者・整備学校の学生・日本で働く外国人整備士（特定技能など）"},"educationalUse":"試験対策","author":{"@id":"https://nosunosukawa.github.io/seibisolo-site/#author"},"offers":[{"@type":"Offer","name":"総合の予想問題（各級1セット）","price":"0","priceCurrency":"JPY"},{"@type":"Offer","name":"3級の全問","price":"980","priceCurrency":"JPY"},{"@type":"Offer","name":"2級の全問","price":"1500","priceCurrency":"JPY"},{"@type":"Offer","name":"1級の全問","price":"1800","priceCurrency":"JPY"}],"dateModified":"2026-10-30"},
+{"@type":"WebSite","@id":"https://nosunosukawa.github.io/seibisolo-site/#site","url":"https://nosunosukawa.github.io/seibisolo-site/","name":"ふりがな整備士","inLanguage":["ja","en"]},
+{"@type":"MobileApplication","@id":"https://nosunosukawa.github.io/seibisolo-site/#app","name":"ふりがな整備士","alternateName":["整備士過去問","Furigana Seibishi"],"url":"https://nosunosukawa.github.io/seibisolo-site/","installUrl":"https://apps.apple.com/jp/app/id6827350748","sameAs":["https://apps.apple.com/jp/app/id6827350748"],"operatingSystem":"iOS 16.4 or later","applicationCategory":"EducationalApplication","inLanguage":["ja","en","ne","zh","si","vi","my","id"],"description":"自動車整備士の国家試験（自動車整備技能登録試験の学科、1級小型・2級・3級）の過去問を、ふりがな・7か国語の参考訳・選択肢ごとの解説つきで練習できるiPhone・iPadアプリ。","screenshot":["https://nosunosukawa.github.io/seibisolo-site/img/lp/02-why.webp","https://nosunosukawa.github.io/seibisolo-site/img/lp/07-glossary.webp","https://nosunosukawa.github.io/seibisolo-site/img/lp/05-pass-pack.webp","https://nosunosukawa.github.io/seibisolo-site/img/lp/06-real-format.webp"],"audience":{"@type":"EducationalAudience","educationalRole":"student","audienceType":"自動車整備士の受験者・整備学校の学生・日本で働く外国人整備士（特定技能など）"},"educationalUse":"試験対策","author":{"@id":"https://nosunosukawa.github.io/seibisolo-site/#author"},"offers":[{"@type":"Offer","name":"総合の予想問題（各級1セット）","price":"0","priceCurrency":"JPY"},{"@type":"Offer","name":"3級の全問","price":"980","priceCurrency":"JPY"},{"@type":"Offer","name":"2級の全問","price":"1500","priceCurrency":"JPY"},{"@type":"Offer","name":"1級の全問","price":"1800","priceCurrency":"JPY"}],"dateModified":"2026-11-07"},
 {"@type":"Person","@id":"https://nosunosukawa.github.io/seibisolo-site/#author","name":"川﨑 信隆","alternateName":"Nobutaka Kawasaki","description":"日本の大学で自動車整備士の教育に携わる教員。外国人の留学生・整備士のためにこのアプリを作成。","email":"nosunosukawa@gmail.com"},
 {"@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"外国人が日本の自動車整備士の国家試験を勉強できるアプリはありますか？","acceptedAnswer":{"@type":"Answer","text":"ふりがな整備士は、試験と同じ日本語の問題に、すべての漢字のふりがなと、英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語の参考訳を付けた過去問アプリです。問題ごとに専門用語の訳も出ます。"}},
 {"@type":"Question","name":"自動車整備士の試験はいつから「総合」に変わりますか？","acceptedAnswer":{"@type":"Answer","text":"2級と3級の学科試験は、令和9年（2027年）3月14日の試験から、ガソリン・ジーゼル・シャシ・二輪などに分かれていた試験が1つの「総合」の試験になります。1級（一級小型）の総合の試験は、早くて令和10年3月からの見込みです。"}},
-{"@type":"Question","name":"総合の試験の過去問はありますか？","acceptedAnswer":{"@type":"Answer","text":"まだありません（初回が令和9年3月のため）。ふりがな整備士は、これまでの試験の過去問（平成28年10月〜令和8年10月）を、総合の試験の分野（エンジン・シャシ・電子制御装置・整備機器と基礎・法規）に並べ直して収録しています。"}},
+{"@type":"Question","name":"総合の試験の過去問はありますか？","acceptedAnswer":{"@type":"Answer","text":"まだありません（初回が令和9年3月のため）。ふりがな整備士は、これまでの試験の過去問（2級・3級は平成28年10月〜令和8年10月、1級は平成29年3月〜令和8年3月）を、総合の試験の分野（エンジン・シャシ・電子制御装置・整備機器と基礎・法規）に並べ直して収録しています。"}},
 {"@type":"Question","name":"無料で使えますか？","acceptedAnswer":{"@type":"Answer","text":"級ごとに本番1回分の形の「総合の予想問題」（2級40問・3級30問・1級50問）は無料で全部解けます。全問は級ごとの買い切り（3級980円・2級1,500円・1級1,800円）です。サブスクリプションはありません。"}},
-{"@type":"Question","name":"日整連の公式アプリですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。収録している問題は、日本自動車整備振興会連合会がホームページで公開している自動車整備技能登録試験の問題です。このアプリは個人が作成したもので、同連合会の公認・監修を受けたものではありません。"}}
+{"@type":"Question","name":"訳は正しいですか？","acceptedAnswer":{"@type":"Answer","text":"訳と解説は AI で作った参考です。意味が違うときは、日本語の問題文が正しいものです。本番は日本語なので、ふりがなを消して解く練習もしてください。"}},
+{"@type":"Question","name":"日整連の公式アプリですか？","acceptedAnswer":{"@type":"Answer","text":"いいえ。収録している問題は、日本自動車整備振興会連合会がホームページで公開している自動車整備技能登録試験の問題です。このアプリは個人が作成したもので、同連合会の公認・監修を受けたものではありません。"}},
+{"@type":"Question","name":"過去問にふりがなや訳を付けて使ってよいのですか？","acceptedAnswer":{"@type":"Answer","text":"ふりがな・翻訳・解説を付けてアプリで提供することについて、2026年10月に日本自動車整備振興会連合会（日整連）へ書面で問い合わせ、許諾は不要との回答を得ています。公認・監修を受けたという意味ではありません。"}},
+{"@type":"Question","name":"個人情報は集めますか？","acceptedAnswer":{"@type":"Answer","text":"アカウントは要りません。個人データを集めません。ネットがなくても使えます。"}},
+{"@type":"Question","name":"これで合格できますか？","acceptedAnswer":{"@type":"Answer","text":"合格を約束するものではありません。過去問で練習するための道具です。"}}
 ]}
 ]}
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" href="img/icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --teal:#0F766E; --teal-deep:#1F7A6D; --bg:#FFFFFF; --bg-soft:#F3F8F7;
+  --ink:#1A1F1E; --ink-2:#4B5856; --amber:#B45309; --line:#D9E5E2;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",system-ui,sans-serif;font-size:16px;line-height:1.8;overflow-wrap:anywhere}
+img{max-width:100%;height:auto;display:block}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+section{padding:56px 0}
+section.soft{background:var(--bg-soft)}
+h1,h2,h3{line-height:1.5;margin:0 0 16px;font-weight:700;word-break:auto-phrase;line-break:strict}
+h1{font-size:28px}
+h2{font-size:24px}
+h3{font-size:18px;margin-bottom:8px}
+.nb{display:inline-block}
+rt{font-size:.5em;font-weight:400;color:var(--ink-2)}
+p{margin:0 0 16px}
+.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:2px 12px;margin-bottom:12px}
+.sub{color:var(--ink-2)}
+.note{font-size:13px;color:var(--ink-2);line-height:1.7}
+.mark{color:var(--amber)}
+/* buttons */
+.cta{display:flex;align-items:center;justify-content:center;min-height:56px;padding:12px 24px;border-radius:12px;background:var(--teal);color:#fff;font-weight:700;font-size:18px;text-decoration:none;width:100%}
+.cta:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.cta-note{font-size:14px;color:var(--ink-2);margin-top:8px;text-align:center}
+/* hero */
+.hero{padding:20px 0 40px}
+.qcard{border:1px solid var(--line);border-radius:16px;background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08);padding:14px 16px;margin:16px 0}
+.qsrc{font-size:12px;color:var(--ink-2);margin-bottom:4px}
+.qstem{font-size:20px;font-weight:700;line-height:2;margin:0 0 8px}
+.qcard.noruby rt{visibility:hidden}
+.ctrl{display:flex;align-items:center;justify-content:space-between;gap:8px;border-top:1px solid var(--line);padding-top:12px}
+.toggle{min-height:44px;padding:0 14px;border-radius:999px;border:1px solid var(--teal);background:#fff;color:var(--teal);font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.toggle[aria-pressed="true"]{background:var(--teal);color:#fff}
+.langs{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 8px}
+.langs button{min-height:44px;padding:0 12px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink);font:inherit;font-size:14px;cursor:pointer}
+.langs button[aria-pressed="true"]{border-color:var(--teal);background:#E6F2F0;color:var(--teal);font-weight:700}
+.tr{background:var(--bg-soft);border-radius:10px;padding:10px 12px;font-size:15px;line-height:1.7;min-height:4.4em}
+.tr b{display:inline-block;font-size:11px;color:#fff;background:var(--teal-deep);border-radius:4px;padding:0 6px;margin-bottom:4px}
+.trust{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--ink-2);margin-top:16px}
+.trust::before{content:"";flex:none;width:18px;height:18px;margin-top:3px;border-radius:50%;background:var(--teal) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M5 12l5 5 9-10'/%3E%3C/svg%3E") center/12px no-repeat}
+/* boxes */
+.two{display:grid;gap:12px;margin:24px 0 0}
+.box{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
+.box.on{border:2px solid var(--teal)}
+.box small{display:block;font-size:13px;color:var(--teal);font-weight:700}
+.stat{border:1px solid var(--line);border-radius:12px;background:#fff;padding:24px 16px;text-align:center;margin:24px 0 0}
+.num{font-size:44px;font-weight:700;color:var(--amber);line-height:1.2;margin:8px 0}
+.num span{font-size:16px;color:var(--ink);margin:0 4px}
+.tools{list-style:none;padding:0;margin:24px 0;display:grid;gap:12px;counter-reset:t}
+.tools li{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff;counter-increment:t}
+.tools li h3::before{content:counter(t);display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;font-size:14px;margin-right:8px;vertical-align:2px}
+.tools p{margin:0}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.shots img{border-radius:12px;border:1px solid var(--line)}
+.map{width:100%;border-collapse:collapse;margin:16px 0;font-size:15px}
+.map th,.map td{border-top:1px solid var(--line);padding:10px 4px;text-align:left;vertical-align:top}
+.map th{width:42%;color:var(--teal)}
+.icons{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0 0;text-align:center}
+.icons div{border:1px solid var(--line);border-radius:12px;padding:16px 4px;background:#fff;font-size:14px;line-height:1.5}
+.icons strong{display:block;font-size:32px;color:var(--amber);line-height:1.3}
+.facts{display:grid;gap:12px;margin:24px 0}
+.fact{border-left:4px solid var(--teal);background:#fff;padding:12px 16px;border-radius:0 12px 12px 0}
+.fact .when{font-size:28px;font-weight:700;color:var(--amber);line-height:1.3}
+.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:24px 0;text-align:center}
+.grades>div{border:1px solid var(--line);border-radius:12px;padding:16px 4px;background:#fff}
+.grades .g{font-weight:700;color:var(--teal)}
+.grades .n{font-size:32px;font-weight:700;color:var(--amber);line-height:1.3}
+.grades .u{font-size:13px;color:var(--ink-2)}
+.feat{padding-left:1.2em;margin:0 0 16px}
+details{border:1px solid var(--line);border-radius:12px;background:#fff;margin:0 0 10px}
+summary{cursor:pointer;padding:14px 16px;font-weight:700;list-style:none;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"Q";color:var(--teal);margin-right:8px}
+details[open] summary{border-bottom:1px solid var(--line)}
+details p{padding:12px 16px 4px;margin:0 0 8px}
+.price .n{font-size:30px}
+.final{text-align:center}
+footer{background:var(--teal-deep);color:#fff;padding:32px 0;font-size:13px;line-height:1.8}
+footer p{margin:0 0 8px}
+.ask{background:#FFF7ED;border:1px dashed var(--amber);color:var(--amber);font-size:13px;padding:2px 6px;border-radius:4px}
+.site{background:var(--teal-deep);color:#fff}
+.site .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:2px 12px;padding-top:4px;padding-bottom:4px;font-size:13px}
+.site a{color:#fff;text-decoration:none;min-height:40px;display:inline-flex;align-items:center}
+.site .brand{font-weight:700;font-size:15px;margin-right:auto}
+.site nav{display:flex;flex-wrap:wrap;gap:0 12px}
+footer a{color:#fff}
+.fnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 16px}
+.fnav a{min-height:32px;display:inline-flex;align-items:center}
+#more h3{margin-top:24px}
+.ml li{margin-bottom:6px}
+</style>
 </head>
 <body>
-<header><div class="in"><a class="brand" href="index.html">ふりがな整備士</a><nav><a href="index.html">トップ</a><a href="sogo.html">総合の試験</a><a href="sample-k2.html">問題の例</a><a href="screens.html">画面</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a></nav></div></header>
-<main>
-<section class="hero">
-<h1>ふりがな整備士</h1>
-<p class="lead">日本語の自動車整備士試験を、ふりがなと母国語の訳で。<br>1・2・3級の過去問と、選択肢ごとの解説。</p>
-<p class="cta"><span class="btn off" aria-disabled="true">App Store で近日公開</span><a class="btn ghost" href="sample-k2.html">実際の問題を見る</a></p>
-<p class="meta">iPhone・iPad（iOS 16.4 以上）。級ごとに本番1回分の「総合の予想問題」は無料で全部解けます。ホーム画面では「整備士過去問」と表示されます。</p>
-<div class="heroimg"><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" width="600"><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" width="600"><img src="img/shot-02-explanation.jpg" alt="選択肢ごとの解説" width="600"></div>
+
+<div class="site"><div class="wrap"><a class="brand" href="./">ふりがな整備士</a><nav aria-label="サイト内"><a href="sogo.html">総合の試験</a><a href="sample-k2.html">問題の例</a><a href="en.html" lang="en" hreflang="en">English</a></nav></div></div>
+
+<!-- 1 自分向けと分かる（ファーストビュー C 案） -->
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">自動車整備士 1級・2級・3級（学科）の過去問アプリ</span>
+    <h1><ruby>整備士<rt>せいびし</rt></ruby>の<ruby>過去問<rt>かこもん</rt></ruby><span class="nb">に、</span><span class="nb">ふりがなと</span> <span class="nb"><span class="mark">7か<ruby>国語<rt>こくご</rt></ruby></span>の<ruby>参考訳<rt>さんこうやく</rt></ruby>。</span></h1>
+    <p class="sub">本番と同じ日本語の問題文のまま。読み方と意味を、その場で確かめながら解けます。</p>
+
+    <div class="qcard" id="qcard">
+      <div class="qsrc">令和3年10月 二級ガソリン No.1（過去問）</div>
+      <p class="qstem">エンジンの<ruby>性能<rt>せいのう</rt></ruby>に<ruby>関<rt>かん</rt></ruby>する<ruby>記述<rt>きじゅつ</rt></ruby>として、<ruby>適切<rt>てきせつ</rt></ruby>なものは<ruby>次<rt>つぎ</rt></ruby>のうちどれか。</p>
+      <div class="ctrl">
+        <span class="note">ことばを押してみてください</span>
+        <button class="toggle" id="rubyBtn" type="button" aria-pressed="true">ふりがな</button>
+      </div>
+      <div class="langs" id="langs" role="group" aria-label="参考訳のことば">
+        <button type="button" data-l="en" aria-pressed="true">English</button>
+        <button type="button" data-l="ne" lang="ne">नेपाली</button>
+        <button type="button" data-l="zh" lang="zh">中文</button>
+        <button type="button" data-l="vi" lang="vi">Tiếng Việt</button>
+        <button type="button" data-l="id" lang="id">Indonesia</button>
+        <button type="button" data-l="si" lang="si">සිංහල</button>
+        <button type="button" data-l="my" lang="my">မြန်မာ</button>
+      </div>
+      <div class="tr" aria-live="polite"><b>参考訳</b><br><span id="trText" lang="en">Which of the following statements about engine performance is appropriate?</span></div>
+    </div>
+    <a class="cta" href="https://apps.apple.com/jp/app/id6827350748">App Store で見る</a>
+    <!-- 体験ページへの導線（demo.html） -->
+    <a href="demo.html" style="display:flex;align-items:center;justify-content:center;min-height:48px;margin:12px 0 0;border:1px solid var(--teal);border-radius:12px;background:#fff;color:var(--teal);font-weight:700;font-size:16px;text-decoration:none">5問を体験する ›</a>
+    <p class="cta-note">級ごとの「総合の予想問題」（本番1回分の形）は、買わずに全部解けます</p>
+    <p class="trust">問題文・選択肢・正解は、問題用紙と正答表で照らし合わせました</p>
+  </div>
+</header>
+
+<!-- 2 問題の理解 -->
+<section class="soft">
+  <div class="wrap">
+    <h2>整備の知識と、問題文の日本語。つまずく所は2つあります。</h2>
+    <p>学科の過去問は、漢字の多い長い文です。整備の知識があっても、読み方や言葉の意味が分からないと、答えを考える前に時間がかかります。</p>
+    <div class="two">
+      <div class="box"><small>1つ目</small>整備の知識</div>
+      <div class="box on"><small>2つ目 ― このアプリが手伝う所</small>問題文の日本語（読み方・言葉の意味）</div>
+    </div>
+  </div>
 </section>
 
-<h2>あなたはどれ？</h2>
-<div class="who">
-<a class="card" href="#foreign"><b>外国人の受験者</b><span>留学生・特定技能の整備士。日本語の問題を、ふりがなと7か国語の訳で読めます。</span></a>
-<a class="card" href="#japanese"><b>日本人の受験者</b><span>整備学校の学生・現場の整備士。総合の分野で過去問を解き、弱点を復習できます。</span></a>
-<a class="card" href="#schools"><b>学校・会社の先生</b><span>外国人の学生・社員の指導に。まとめての利用はご相談ください。</span></a>
-</div>
+<!-- 3 従来方法の限界 -->
+<section>
+  <div class="wrap">
+    <h2>辞書で調べながら解くと、1問に時間がかかる。</h2>
+    <p>紙の過去問や問題集は、ふりがなや訳が付いていないものが多く、1語ずつ調べることになります。</p>
+    <div class="box" style="margin-top:24px">
+      <p style="margin:0;font-weight:700">もう1つ、見えにくい手間があります。</p>
+      <p style="margin:8px 0 0">ひとりで過去問を解いていると、答えや問題文が本当に合っているかを、自分では確かめにくいものです。だから、確かめた資料のある問題で練習することが大切です。</p>
+    </div>
+  </div>
+</section>
 
-<h2 id="free">まず無料で、本番1回分</h2>
-<p>級ごとの「総合の予想問題」（2級40問・3級30問・1級50問）は、買わなくても全部解けます。解いて、解説を読んで、訳を確かめて、まちがえた問題を復習するところまで、全部試せます。気に入ったら級ごとの買い切り（3級980円・2級1,500円・1級1,800円）。サブスクリプションはありません。</p>
+<!-- 4 新しい仕組み -->
+<section class="soft">
+  <div class="wrap">
+    <h2>1つの問題に、読むための道具を4つ。</h2>
+    <ol class="tools">
+      <li><h3>ふりがな</h3><p>全部の漢字に。ボタン1つで消せるので、本番に近い形でも練習できます。</p></li>
+      <li><h3>7か国語の参考訳</h3><p>問題文と解説に。英語・ネパール語・中国語・ベトナム語・インドネシア語・シンハラ語・ミャンマー語。</p><p class="note">シンハラ語・ミャンマー語は、2級の車体・電装は一部です。</p></li>
+      <li><h3>選択肢ごとの○×の解説</h3><p>どこが違うのかが、1つずつ分かります。</p></li>
+      <li><h3>用語の訳と「基本の言葉」</h3><p>整備の専門用語の意味を、自分のことばで確かめられます。本試験によく出る言葉もまとめてあります。</p></li>
+    </ol>
+    <div class="shots">
+      <img src="img/lp/02-why.webp" alt="選択肢ごとの○×の解説の画面" loading="lazy" width="600" height="1303">
+      <img src="img/lp/07-glossary.webp" alt="用語の訳の画面" loading="lazy" width="600" height="1303">
+    </div>
+    <h3>過去問の勉強で、効くこと3つ</h3>
+    <table class="map">
+      <tr><th>直しがすぐ分かる</th><td>選択肢ごとの○×の解説と訳。訳や解説の誤りは、アプリから知らせられます</td></tr>
+      <tr><th>範囲を絞る</th><td>合格パック（出やすい問題に絞ったセット）</td></tr>
+      <tr><th>レベルに合わせる</th><td>間違えた問題の解き直しと、分野ごとの正答率</td></tr>
+    </table>
+    <p class="note">整備士の学校で国家試験の補習を続けてきた経験から作りました。</p>
+  </div>
+</section>
 
-<h2>実際の問題を見る</h2>
-<p>アプリに入っている問題を、ふりがな・正解・選択肢ごとの解説・訳つきでそのまま公開しています。</p>
-<ul><li><a href="sample-k2.html">2級の過去問の例（6問）</a></li><li><a href="sample-k3.html">3級の過去問の例（4問）</a></li><li><a href="sample-k1.html">1級の過去問の例（4問）</a></li></ul>
+<!-- 5 実現可能 -->
+<section>
+  <div class="wrap">
+    <h2>ネットがなくても、アカウントがなくても。</h2>
+    <p>オフラインで使えます。登録やログインはありません。個人データを集めません。合格パックは、まだ覚えていない問題から20問ずつ出題します。</p>
+    <div class="icons">
+      <div><strong>0</strong>ネットが<br>なくても</div>
+      <div><strong>0</strong>アカウント<br>登録</div>
+      <div><strong>20</strong>問ずつ<br>出題</div>
+    </div>
+  </div>
+</section>
 
-<h2>画面</h2>
-<div class="grid">
-<figure><img src="img/real-home.jpg" alt="ふりがな整備士のホーム画面。総合の予想問題40問" loading="lazy" width="600"><figcaption>ホーム</figcaption></figure>
-<figure><img src="img/shot-01-question.jpg" alt="ふりがなつきの問題の画面" loading="lazy" width="600"><figcaption>ふりがなつきの問題</figcaption></figure>
-<figure><img src="img/real-tr-vi.jpg" alt="問題文のベトナム語訳と用語の訳" loading="lazy" width="600"><figcaption>問題文の訳（ベトナム語）</figcaption></figure>
-</div>
-<p><a href="screens.html">画面をもっと見る（14枚）</a></p>
+<!-- 6 証拠 -->
+<section class="soft">
+  <div class="wrap">
+    <h2><ruby>問題文<rt>もんだいぶん</rt></ruby>・<ruby>選択肢<rt>せんたくし</rt></ruby>・<ruby>正解<rt>せいかい</rt></ruby>は、<ruby>問題用紙<rt>もんだいようし</rt></ruby>と<ruby>正答表<rt>せいとうひょう</rt></ruby>で照らし合わせました。</h2>
+    <div class="facts">
+      <div class="fact"><strong>収録している問題</strong><br>日整連（一般社団法人 日本自動車整備振興会連合会）が公開している、自動車整備技能登録試験（学科）の過去問です。</div>
+      <div class="fact"><div class="when">2026年10月</div>ふりがな・翻訳・解説を付けてアプリで提供することについて、日整連に書面で問い合わせ、許諾は不要との回答を得ました。</div>
+      <div class="fact"><strong>訳と解説</strong><br>AI で作った参考です。意味が違うときは、日本語の問題文が正しいものです。</div>
+    </div>
+    <p class="note">このアプリは個人が作ったもので、日整連の公認・監修を受けたものではありません。</p>
+  </div>
+</section>
 
+<!-- 7 自分の場合を想像 -->
+<section>
+  <div class="wrap">
+    <h2>あなたの級で、こう使います。</h2>
+    <p><strong>合格パック</strong>は、過去の出題傾向と新しい総合の教科書から、出やすい問題を選んだセットです。まだ覚えていない問題から20問ずつ出題します。</p>
+    <div class="grades">
+      <div><div class="g">3級</div><div class="n">500</div><div class="u">問</div></div>
+      <div><div class="g">2級</div><div class="n">600</div><div class="u">問</div></div>
+      <div><div class="g">1級</div><div class="n">450</div><div class="u">問</div></div>
+    </div>
+    <ul class="feat">
+      <li>回数別の本番形式（本番と同じ問題数・試験時間の残りの表示・合否判定）</li>
+      <li>分野別</li>
+      <li>間違えた問題・お気に入りの解き直し</li>
+      <li>成績（分野ごとの正答率）</li>
+    </ul>
+    <div class="shots">
+      <img src="img/lp/05-pass-pack.webp" alt="合格パックの画面" loading="lazy" width="600" height="1303">
+      <img src="img/lp/06-real-format.webp" alt="回数別の本番形式の画面" loading="lazy" width="600" height="1303">
+    </div>
+  </div>
+</section>
 
-<h2 id="foreign">外国人の受験者へ</h2>
-<p>試験は日本語だけです。このアプリは、すべての漢字にふりがなを付け、問題文と解説に参考の訳を付けています。訳で意味をつかんだら、最後は日本語の問題文で解けるように練習します。問題ごとに専門用語の訳も出ます。</p>
-<ul class="langs">
-<li lang="en">English — Past exam questions with furigana, explanations and English translations.</li>
-<li lang="ne">नेपाली — फुरिगाना, व्याख्या र नेपाली अनुवादसहित पुराना प्रश्नहरू।</li>
-<li lang="zh">中文 — 历年真题，附注音假名、解析和中文译文。</li>
-<li lang="si">සිංහල — ෆුරිගනා, පැහැදිලි කිරීම් සහ සිංහල පරිවර්තන සමඟ පැරණි ප්‍රශ්න.</li>
-<li lang="vi">Tiếng Việt — Đề thi các năm có furigana, giải thích và bản dịch tiếng Việt.</li>
-<li lang="my">မြန်မာ — ဖူရီဂါနာ၊ ရှင်းလင်းချက်နှင့် မြန်မာဘာသာပြန်ပါသော ယခင်မေးခွန်းများ။</li>
-<li lang="id">Bahasa Indonesia — Soal ujian tahun lalu dengan furigana, penjelasan dan terjemahan bahasa Indonesia.</li>
-</ul>
+<!-- 8 不安解消 -->
+<section class="soft">
+  <div class="wrap">
+    <h2>始める前に、知っておいてほしいこと。</h2>
+    <details open><summary>2027年3月からの「総合」の試験の問題ですか？</summary>
+      <p>2級・3級の学科は、2027年（令和9年）3月14日の試験から「総合」に変わります。1級（一級小型）は、早くて2028年（令和10年）3月からの見込みです。総合の試験の過去問は、まだありません。収録しているのは、これまでの試験の過去問を、総合の分野に並べ直したものです。くわしくは <a href="sogo.html">総合の試験への変更と勉強のしかた</a>。</p></details>
+    <details><summary>外国人でも勉強できますか？</summary>
+      <p>試験と同じ日本語の問題に、全部の漢字のふりがなと、英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語の参考訳を付けています。問題ごとに専門用語の訳も出ます。本番は日本語なので、最後は日本語の問題文で解けるように練習します。</p></details>
+    <details><summary>無料で使えますか？</summary>
+      <p>級ごとに本番1回分の形の「総合の予想問題」（2級40問・3級30問・1級50問）は、買わなくても全部解けます。全部の問題は級ごとの買い切り（3級980円・2級1,500円・1級1,800円）です。サブスクリプションはありません。</p></details>
+    <details><summary>訳は正しいですか？</summary>
+      <p>訳と解説は AI で作った参考です。意味が違うときは、日本語の問題文が正しいものです。本番は日本語なので、ふりがなを消して解く練習もしてください。</p></details>
+    <details><summary>日整連の公式アプリですか？</summary>
+      <p>いいえ。個人が作ったアプリで、日整連の公認・監修ではありません。収録している問題は、日整連がホームページで公開している自動車整備技能登録試験（学科）の問題です。</p></details>
+    <details><summary>過去問にふりがなや訳を付けて使ってよいのですか？</summary>
+      <p>ふりがな・翻訳・解説を付けてアプリで提供することについて、2026年10月に日整連へ書面で問い合わせ、許諾は不要との回答を得ています。公認・監修を受けたという意味ではありません。</p></details>
+    <details><summary>毎日続けられるか不安です。</summary>
+      <p>合格パックは、まだ覚えていない問題から20問ずつです。ネットがなくても開けます。間違えた問題だけを解き直すこともできます。</p></details>
+    <details><summary>個人情報は？</summary>
+      <p>アカウントは要りません。個人データを集めません。</p></details>
+    <details><summary>これで合格できますか？</summary>
+      <p>合格を約束するものではありません。過去問で練習するための道具です。</p></details>
+  </div>
+</section>
 
-<h2 id="japanese">日本人の受験者へ</h2>
-<p>2027年3月から2級・3級は「総合」の試験になります。このアプリは、これまでの過去問を総合の分野に並べ直してあるので、ガソリン・ジーゼルを分けずに勉強できます。ふりがなは消せます。文字の大きさ、苦手な問題の復習、本番の形の模擬試験もあります。くわしくは <a href="sogo.html">総合の試験への変更と勉強のしかた</a>。</p>
+<!-- 9 行動条件 -->
+<section>
+  <div class="wrap">
+    <h2>まず「<ruby>総合<rt>そうごう</rt></ruby>の<ruby>予想問題<rt>よそうもんだい</rt></ruby>」を、<ruby>買<rt>か</rt></ruby>わずに<ruby>全部<rt>ぜんぶ</rt></ruby><ruby>解<rt>と</rt></ruby>けます。</h2>
+    <p>級ごとの「総合の予想問題」（本番1回分の形）は、買わなくても全部解けます。全部の問題は、級ごとの買い切りです。</p>
+    <div class="grades price">
+      <div><div class="g">3級</div><div class="n">980</div><div class="u">円・買い切り</div></div>
+      <div><div class="g">2級</div><div class="n">1,500</div><div class="u">円・買い切り</div></div>
+      <div><div class="g">1級</div><div class="n">1,800</div><div class="u">円・買い切り</div></div>
+    </div>
+    <!-- 学校・団体の方へ（2026-11-07 社長「学校むけにアナウンス」）。需要を確かめるための問い合わせ口。値段と時期はまだ書かない（docs/school-purchase-study-2026-11-07.md） -->
+    <div class="box" id="school" style="margin-top:32px">
+      <p style="margin:0;font-weight:700;font-size:18px">学校・団体の方へ</p>
+      <p style="margin:8px 0 0">整備士の学校などで、学生の人数分をまとめて導入できる形（Apple School Manager）を検討しています。関心のある学校・団体は、学生の人数と使いたい級をそえて、お問い合わせください。</p>
+      <a href="mailto:nosunosukawa@gmail.com?subject=%E5%AD%A6%E6%A0%A1%E3%81%A7%E3%81%AE%E5%B0%8E%E5%85%A5%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6" style="display:flex;align-items:center;justify-content:center;min-height:48px;margin:16px 0 0;border:1px solid var(--teal);border-radius:12px;background:#fff;color:var(--teal);font-weight:700;font-size:16px;text-decoration:none">学校での導入について問い合わせる</a>
+    </div>
+  </div>
+</section>
 
-<h2 id="schools">学校・会社の先生へ</h2>
-<p>外国人の留学生・社員の指導にお使いください。まとめての導入や、授業での使い方のご相談は <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a> へどうぞ。</p>
+<!-- 10 CTA -->
+<section class="soft final">
+  <div class="wrap">
+    <h2>まず1問、<ruby>自分<rt>じぶん</rt></ruby>のことばで<ruby>読<rt>よ</rt></ruby>んでみる。</h2>
+    <p>iPhone・iPad のアプリです。</p>
+    <a class="cta" href="https://apps.apple.com/jp/app/id6827350748">App Store で見る</a>
+    <!-- 体験ページへの導線（demo.html） -->
+    <a href="demo.html" style="display:flex;align-items:center;justify-content:center;min-height:48px;margin:12px 0 0;border:1px solid var(--teal);border-radius:12px;background:#fff;color:var(--teal);font-weight:700;font-size:16px;text-decoration:none">先に5問を体験する ›</a>
+  </div>
+</section>
 
-<h2>要点</h2>
-<ul>
-<li><b>収録</b>: 自動車整備技能登録試験（学科）の過去問。2級（二級ガソリン・ジーゼル・二輪・シャシ、自動車車体、自動車電気装置）、3級（三級ガソリン・ジーゼル・シャシ・二輪）は平成28年10月〜令和8年10月、1級（一級小型の学科〈筆記〉）は平成29年3月〜令和8年3月。</li>
-<li><b>ふりがな</b>: 問題・選択肢・解説のすべての漢字に。読みは「自動車整備用語辞典」に合わせています。オン・オフを切り替えられます。</li>
-<li><b>7か国語の参考訳</b>: 問題文と解説に、英語・ネパール語・中国語・シンハラ語・ベトナム語・ミャンマー語・インドネシア語。問題ごとに専門用語の訳も出ます。</li>
-<li><b>解説</b>: 全問に、選択肢ごとに「なぜ正しいか・誤りか」を書いた独自の解説。正答表と照合しています。</li>
-<li><b>総合の試験に対応した並べ方</b>: 2027年3月からの「総合」の分野（エンジン・シャシ・電子制御装置・整備機器と基礎・法規）に並べ直しています。</li>
-<li><b>無料で試せる</b>: 級ごとに本番1回分の「総合の予想問題」（2級40問・3級30問・1級50問）。全問は級ごとの買い切り（3級980円・2級1,500円・1級1,800円）。</li>
-<li><b>ネット不要・アカウント不要</b>: 記録は端末と、使う設定のときはご本人の iCloud に保存。</li>
-</ul>
-<p>訳と解説は AI で下書きし、人が問題用紙と照合した参考です。意味が違うときは、日本語の問題文が正しいものです。</p>
+<!-- くわしく（旧トップから引き継いだ、検索で効いている事実） -->
+<section id="more">
+  <div class="wrap">
+    <h2>くわしく</h2>
+    <h3>収録している過去問</h3>
+    <p>自動車整備技能登録試験（学科）の過去問です。2級（二級ガソリン・ジーゼル・二輪・シャシ、自動車車体、自動車電気装置）と3級（三級ガソリン・ジーゼル・シャシ・二輪）は平成28年10月〜令和8年10月、1級（一級小型の学科〈筆記〉）は平成29年3月〜令和8年3月。総合の試験の分野（エンジン・シャシ・電子制御装置・整備機器と基礎・法規）に並べ直しています。</p>
+    <h3>「総合」の試験への変更</h3>
+    <p>2級・3級の学科は、令和9年（2027年）3月14日の試験から、ガソリン・ジーゼル・シャシ・二輪などに分かれていた試験が1つの「総合」の試験になります。1級（一級小型）は早くて令和10年3月からの見込みです。<a href="sogo.html">総合の試験への変更と勉強のしかた</a></p>
+    <h3>実際の問題を見る</h3>
+    <ul class="feat">
+      <li><a href="sample-k2.html">2級の過去問の例（6問）</a></li>
+      <li><a href="sample-k3.html">3級の過去問の例（4問）</a></li>
+      <li><a href="sample-k1.html">1級の過去問の例（4問）</a></li>
+      <li><a href="screens.html">画面をもっと見る（iPhone・iPad）</a></li>
+    </ul>
+    <h3>7つのことばで</h3>
+    <ul class="feat ml">
+      <li lang="en">English — Past exam questions with furigana, explanations and English translations. <a href="en.html">Read in English</a></li>
+      <li lang="ne">नेपाली — फुरिगाना, व्याख्या र नेपाली अनुवादसहित पुराना प्रश्नहरू।</li>
+      <li lang="zh">中文 — 历年真题，附注音假名、解析和中文译文。</li>
+      <li lang="si">සිංහල — ෆුරිගනා, පැහැදිලි කිරීම් සහ සිංහල පරිවර්තන සමඟ පැරණි ප්‍රශ්න.</li>
+      <li lang="vi">Tiếng Việt — Đề thi các năm có furigana, giải thích và bản dịch tiếng Việt.</li>
+      <li lang="my">မြန်မာ — ဖူရီဂါနာ၊ ရှင်းလင်းချက်နှင့် မြန်မာဘာသာပြန်ပါသော ယခင်မေးခွန်းများ။</li>
+      <li lang="id">Bahasa Indonesia — Soal ujian tahun lalu dengan furigana, penjelasan dan terjemahan bahasa Indonesia.</li>
+    </ul>
+    <p class="note">iPhone・iPad（iOS 16.4 以上）。ホーム画面では「整備士過去問」と表示されます。ふりがなの読みは「自動車整備用語辞典」に合わせています。</p>
+  </div>
+</section>
 
-<h2>だれが作ったか</h2>
-<p>日本の大学で自動車整備士の教育に携わっている教員（川﨑 信隆）が、日本語だけで行われる国家試験を目指す外国人の留学生・整備士（特定技能など）のために作りました。日本人の受験者にも、ふりがなの切り替え・文字の大きさ・弱点の復習が使えます。</p>
+<footer>
+  <div class="wrap">
+    <p>ふりがな整備士</p>
+    <nav class="fnav" aria-label="フッター"><a href="./">トップ</a><a href="demo.html">5問を体験</a><a href="sogo.html">総合の試験</a><a href="sample-k2.html">2級の例</a><a href="sample-k3.html">3級の例</a><a href="sample-k1.html">1級の例</a><a href="screens.html">画面</a><a href="support.html">サポート</a><a href="privacy.html">プライバシー</a><a href="en.html" lang="en" hreflang="en">English</a><a href="mailto:nosunosukawa@gmail.com">お問い合わせ</a></nav>
+    <p>このアプリは個人が作ったもので、一般社団法人 日本自動車整備振興会連合会（日整連）の公認・監修を受けたものではありません。収録している問題は、日整連が公開している自動車整備技能登録試験（学科）の問題です。</p>
+    <p>訳と解説は AI で作った参考です。意味が違うときは、日本語の問題文が正しいものです。</p>
+  </div>
+</footer>
 
-<h2>よくある質問</h2>
-<h3>外国人が整備士の国家試験を勉強できるアプリはありますか？</h3>
-<p>ふりがな整備士は、試験と同じ日本語の問題に、ふりがなと7か国語の参考訳を付けています。本番は日本語なので、訳は「意味をつかむための補助」として使い、最後は日本語の問題文で解けるように作っています。</p>
-<h3>試験はいつから「総合」に変わりますか？</h3>
-<p>2級と3級の学科は、令和9年（2027年）3月14日の試験から総合になります。1級（一級小型）は早くて令和10年3月からの見込みです。くわしくは <a href="sogo.html">総合の試験への変更と勉強のしかた</a>。</p>
-<h3>総合の過去問はありますか？</h3>
-<p>まだありません。このアプリは、これまでの過去問を総合の分野に並べ直して収録しています。総合の問題が公表されたら加える予定です。</p>
-<h3>日整連の公式アプリですか？</h3>
-<p>いいえ。収録している問題は、日本自動車整備振興会連合会がホームページで公開している自動車整備技能登録試験の問題です。このアプリは個人が作成したもので、同連合会の公認・監修を受けたものではありません。</p>
-<p><a href="sogo.html">総合の試験への変更と勉強のしかた</a> ・ <a href="support.html">サポート</a> ・ <a href="privacy.html">プライバシーポリシー</a></p>
-
-<section class="en" lang="en"><h2>English</h2>
-<p><b>Furigana Seibishi</b> is an iPhone and iPad app for foreign students and mechanics in Japan preparing for the national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2 and grade 3). It contains past exam questions with an explanation for every choice, furigana on every kanji, and reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Questions are re-organized into the fields of the new comprehensive ("総合") exam that starts in March 2027. One full practice set per grade is free. Made by a university teacher in mechanic education; not endorsed by JASPA.</p></section>
-</main>
-<footer>© 2026 のす工房（Nosu Works）・ お問い合わせ: <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a><br>このアプリは個人が作成したもので、一般社団法人 日本自動車整備振興会連合会（日整連）の公認・監修を受けたものではありません。</footer>
+<script>
+(function(){
+  var TR={
+    en:"Which of the following statements about engine performance is appropriate?",
+    ne:"engine को performance सम्बन्धी कथनहरूमध्ये, उपयुक्त कुन हो?",
+    zh:"下列关于发动机性能的叙述中，正确的是哪一项？",
+    vi:"Về tính năng của động cơ, câu nào sau đây là phù hợp?",
+    id:"Manakah pernyataan berikut ini tentang kinerja mesin yang tepat?",
+    si:"එන්ජිමේ performance පිළිබඳ ප්‍රකාශ අතරින්, සුදුසු එක කුමක්ද?",
+    my:"အင်ဂျင်၏ စွမ်းဆောင်ရည်နှင့် ပတ်သက်သော ဖော်ပြချက်အဖြစ် သင့်လျော်သည့်အချက်မှာ အောက်ပါတို့အနက် မည်သည်နည်း။"
+  };
+  var card=document.getElementById('qcard'),btn=document.getElementById('rubyBtn'),out=document.getElementById('trText');
+  btn.addEventListener('click',function(){
+    var on=btn.getAttribute('aria-pressed')!=='true';
+    btn.setAttribute('aria-pressed',on);card.classList.toggle('noruby',!on);
+  });
+  document.getElementById('langs').addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    [].forEach.call(this.querySelectorAll('button'),function(x){x.setAttribute('aria-pressed',x===b)});
+    out.textContent=TR[b.dataset.l];out.lang=b.dataset.l;
+  });
+})();
+</script>
 </body>
 </html>
