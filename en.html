@@ -49,6 +49,7 @@ a{color:var(--teal)}
 .site .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;padding-top:8px;padding-bottom:8px;font-size:14px}
 .site a{color:#fff;text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
 .site .brand{font-weight:700;font-size:16px;margin-right:auto}
+.site nav{display:flex;flex-wrap:wrap;gap:0 14px}
 .tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:2px 12px;margin-bottom:12px}
 .sub{color:var(--ink-2);font-size:17px}
 .note{font-size:13px;color:var(--ink-2)}
@@ -73,6 +74,25 @@ footer{background:var(--teal-deep);color:#fff;padding:32px 0;font-size:13px}
 footer a{color:#fff}
 footer p{margin:0 0 8px}
 .fnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 16px}
+
+/* PC の広い画面（2026-11-07 社長「PCでみるとせまくない？」）: 幅を広げ、1画面目は左に見出しと CTA・右に問題カード。並べられる箱は横に並べる。長い文は読みやすい幅のまま */
+@media (min-width:960px){
+.wrap{max-width:1080px;padding:0 32px}
+h1{font-size:40px}
+h2{font-size:30px}
+section .wrap>p,section .wrap>h2{max-width:760px}
+.hero{padding:48px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;align-items:start}
+.hero .wrap>*{grid-column:1}
+.hero .tag{justify-self:start}
+.hero .qcard{grid-column:2;grid-row:1 / span 8;margin:0}
+.langs{flex-wrap:wrap;overflow-x:visible;margin:12px 0 8px;padding:0}
+.two{grid-template-columns:1fr 1fr}
+.tools{grid-template-columns:1fr 1fr}
+.shots{grid-template-columns:repeat(4,1fr)}
+.facts{grid-template-columns:repeat(3,1fr)}
+.site .wrap{font-size:14px}
+}
 </style>
 </head>
 <body>
