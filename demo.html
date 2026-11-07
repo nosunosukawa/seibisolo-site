@@ -140,7 +140,7 @@ footer p{margin:0 0 6px}
 <main class="wrap" id="quiz">
   <div class="tools">
     <button class="sw" id="rubyBtn" type="button" aria-pressed="true">ふりがな</button>
-    <button class="sw" id="speakBtn" type="button" aria-pressed="false" hidden>読み上げ</button>
+    <button class="sw" id="speakBtn" type="button" aria-pressed="false" hidden>読む</button>
   </div>
   <p class="lab">参考訳のことば</p>
   <div class="langs" id="langs" role="group" aria-label="参考訳のことば">
@@ -256,22 +256,24 @@ footer p{margin:0 0 6px}
     st.lang=b.dataset.l;render();
   });
 
-  // 読み上げ（Web Speech API・ja-JP。読みはアプリのふりがなの読み）。使えないブラウザではボタンを出さない
+  // 読み上げ（Web Speech API・ja-JP）。漢字のままの文を、日本語の声のうち一番自然なもの（Premium・Enhanced・Siri・Google・Natural）で読む（かなだけで渡すと抑揚が消えて機械的だった・社長 11/7）。使えないブラウザではボタンを出さない
   var synth=window.speechSynthesis,sp=$('speakBtn'),speaking=false;
   if(synth&&window.SpeechSynthesisUtterance){
     sp.hidden=false;
     sp.addEventListener('click',function(){
       if(speaking){stopSpeak();return}
-      var q=Q[st.i],parts=[spoken(q.stem)];
-      q.choices.forEach(function(c,k){parts.push((k+1)+'、'+spoken(c))});
+      var base=function(t){return String(t||'').replace(/\{([^|{}]+)\|([^{}]+)\}/g,'$1')};
+      var q=Q[st.i],parts=[base(q.stem)];
+      q.choices.forEach(function(c,k){parts.push((k+1)+'、'+base(c))});
       var u=new SpeechSynthesisUtterance(parts.map(function(x){return x.trim().replace(/[。．.]+$/,'')}).join('。\n'));
       u.lang='ja-JP';u.rate=0.95;
-      var v=(synth.getVoices()||[]).filter(function(v){return /^ja/i.test(v.lang)})[0];if(v)u.voice=v;
-      u.onend=u.onerror=function(){speaking=false;sp.textContent='読み上げ';sp.setAttribute('aria-pressed','false')};
+      var sc=function(v){return (/premium|プレミアム/i.test(v.name)?4:0)+(/enhanced|拡張|siri|natural|google/i.test(v.name)?2:0)+(/compact/i.test(v.voiceURI||'')?-1:0)};
+      var v=(synth.getVoices()||[]).filter(function(v){return /^ja/i.test(v.lang)}).sort(function(a,b){return sc(b)-sc(a)})[0];if(v)u.voice=v;
+      u.onend=u.onerror=function(){speaking=false;sp.textContent='読む';sp.setAttribute('aria-pressed','false')};
       synth.cancel();synth.speak(u);speaking=true;sp.textContent='止める';sp.setAttribute('aria-pressed','true');
     });
   }
-  function stopSpeak(){if(synth&&speaking){synth.cancel()}speaking=false;sp.textContent='読み上げ';sp.setAttribute('aria-pressed','false')}
+  function stopSpeak(){if(synth&&speaking){synth.cancel()}speaking=false;sp.textContent='読む';sp.setAttribute('aria-pressed','false')}
 
   // 試験時間の残り（2級の総合は80分）。時刻で数える。0 で「時間です」（解き続けられる）
   function tick(){
