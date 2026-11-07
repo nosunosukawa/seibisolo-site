@@ -291,7 +291,7 @@ footer p{margin:0 0 6px}
     h+='<h2><ruby>結果<rt>けっか</rt></ruby></h2><p class="score">'+n+'<span>問 正解 ／</span>'+Q.length+'<span>問</span></p>';
     h+='<ul class="rows">';Q.forEach(function(q,k){h+='<li><b style="color:var('+(st.res[k]?'--ok':'--ng')+')">'+(st.res[k]?'○':'×')+'</b><span>No.'+q.no+'　'+esc(q.label.replace(/ No\.\d+$/,''))+'</span></li>'});h+='</ul>';
     h+='<p>アプリでは、2級の「総合の予想問題」40問を、買わずに全部解けます。</p>';
-    h+='<a class="cta" href="https://apps.apple.com/jp/app/id6827350748">App Store で見る</a>';
+    h+='<a class="cta" href="https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&amp;ct=demo&amp;mt=8">App Store で見る</a>';
     h+='<button type="button" class="ghost" id="again">もう一度 5問を解く</button>';
     h+='<a class="ghost" href="./">ふりがな整備士の紹介へ戻る</a>';
     $('quiz').hidden=true;$('act').hidden=true;var d=$('done');d.innerHTML=h;d.hidden=false;
