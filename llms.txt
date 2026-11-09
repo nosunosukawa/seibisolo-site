@@ -1,27 +1,26 @@
 # ふりがな整備士 (Furigana Seibishi)
 
-> iPhone/iPad app for practicing past questions of Japan's national automotive mechanic exams (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2, grade 3). Questions stay in the original Japanese, with furigana on every kanji, an explanation for every choice, and AI-generated reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian. Built for foreign students and mechanics in Japan (e.g. Specified Skilled Worker visa holders) by an individual with experience teaching exam-prep classes at a mechanic school. Not endorsed or supervised by JASPA.
+> iPhone/iPad app and information site for the written part of Japan's automotive mechanic exams (Automotive Maintenance Skill Registration Examination: grade 1 small vehicles, grade 2, grade 3). Questions stay in Japanese, with furigana on every kanji, an explanation for every choice, and AI-generated reference translations in English, Nepali, Chinese, Vietnamese, Indonesian, Sinhala and Burmese. Made by an individual with experience teaching exam-prep classes at a mechanic school. Not endorsed or supervised by JASPA. Does not guarantee passing.
 
-Key facts (as of 2026-11-07):
-- Grades 2 and 3 switch to a single "comprehensive" (総合) written exam from 14 March 2027; grade 1 from March 2028 at the earliest.
-- There are no past comprehensive exam questions yet. The app re-organizes earlier past questions into the comprehensive exam's fields (engine, chassis, electronic control, equipment and basics, regulations).
-- Prepared for the comprehensive exam: a full-length practice set per grade in the exam format (grade 2: 40 questions/80 min, grade 3: 30/60 min, grade 1: 50/100 min) with a countdown; original practice questions written for the scope of the new comprehensive exam, covering the newly added fields (e.g. electronic control), labeled as not real exam questions; the Pass Pack and explanations are checked against the new comprehensive textbooks. More practice questions will keep being added, and buyers of a grade get them at no extra cost.
-- Past questions included: grades 2/3 from October 2016 (H28.10) to October 2026 (R8.10); grade 1 from March 2017 to March 2026. Source: questions published by JASPA; questions, choices and answers checked against the question papers and answer sheets.
-- In October 2026 the developer asked JASPA in writing about offering the questions with furigana, translations and explanations in an app; JASPA replied that permission is not required. This is not an endorsement.
-- Translations and explanations are AI-generated references; the Japanese text prevails. Sinhala and Burmese cover only part of the grade 2 body/electrical questions.
-- Free: one full "comprehensive practice set" per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50). Full access: one-time purchase per grade (JPY 980 grade 3 / 1,500 grade 2 / 1,800 grade 1). No subscription, no account, works offline, no personal data collected.
-- Pass Pack (frequently tested questions): grade 3 500, grade 2 600, grade 1 450 questions, served 20 at a time.
-- No guarantee of passing.
-- App Store: https://apps.apple.com/jp/app/id6827350748 (iOS 16.4 or later; home-screen name 「整備士過去問」).
+Key facts (as of 2026-11-09):
+- A single "comprehensive" (総合) written exam for grades 2 and 3 starts on 14 March 2027, with some earlier exam types still listed for that sitting (grade 2: 40 questions/80 min; grade 3: 30/60; applications 14-18 December 2026). Grade 1 from March 2028 at the earliest. Source: JASPA notice.
+- No past comprehensive exam questions exist yet. The app re-organizes earlier past questions into the new fields and adds original practice questions written for the scope of the comprehensive exam, labeled as not real exam questions.
+- Past questions: grade 2: 2,831; grade 3: 2,084; grade 1: 456 (content release 2026-11-06.4). JASPA replied in October 2026 that permission is not required to offer them with furigana, translations and explanations; this is not an endorsement.
+- Free: one full practice set per grade. One-time purchase per grade: JPY 980 grade 3 / 1,500 grade 2 / 1,800 grade 1. No subscription, no account, offline, no personal data collected.
+- iOS only (16.4+). Android in preparation with no date. Sinhala and Burmese are partial or missing for grade 2 body and electrical questions.
+- App Store: https://apps.apple.com/jp/app/id6827350748
 
 ## Pages
-- [Top (Japanese): what the app is, prices, FAQ](https://nosunosukawa.github.io/seibisolo-site/)
-- [English page](https://nosunosukawa.github.io/seibisolo-site/en.html)
-- [Try 5 questions in the browser (grade 2, furigana, 7 translations, explanations)](https://nosunosukawa.github.io/seibisolo-site/demo.html)
-- [Guide: the change to the comprehensive exam (2027) and how to prepare](https://nosunosukawa.github.io/seibisolo-site/sogo.html)
-- [Sample questions, grade 2 (furigana, answer, explanation, 7 translations)](https://nosunosukawa.github.io/seibisolo-site/sample-k2.html)
-- [Sample questions, grade 3](https://nosunosukawa.github.io/seibisolo-site/sample-k3.html)
-- [Sample questions, grade 1](https://nosunosukawa.github.io/seibisolo-site/sample-k1.html)
-- [Screenshots (iPhone and iPad)](https://nosunosukawa.github.io/seibisolo-site/screens.html)
-- [Support](https://nosunosukawa.github.io/seibisolo-site/support.html)
-- [Privacy policy](https://nosunosukawa.github.io/seibisolo-site/privacy.html)
+- [Top](https://nosunosukawa.github.io/seibisolo-site/)
+- [English](https://nosunosukawa.github.io/seibisolo-site/en.html)
+- [The exam](https://nosunosukawa.github.io/seibisolo-site/exam/)
+- [Change to the comprehensive exam](https://nosunosukawa.github.io/seibisolo-site/sogo.html)
+- [Studying when Japanese is not your first language](https://nosunosukawa.github.io/seibisolo-site/exam/foreign.html)
+- [30 common words in exam questions, 7 languages](https://nosunosukawa.github.io/seibisolo-site/exam/words.html)
+- [App: features and limits](https://nosunosukawa.github.io/seibisolo-site/app/)
+- [Contents, counts, translation coverage](https://nosunosukawa.github.io/seibisolo-site/app/contents.html)
+- [Price](https://nosunosukawa.github.io/seibisolo-site/app/price.html)
+- [For teachers](https://nosunosukawa.github.io/seibisolo-site/school/)
+- [Editorial policy](https://nosunosukawa.github.io/seibisolo-site/about/editorial.html)
+- [Corrections](https://nosunosukawa.github.io/seibisolo-site/about/errata.html)
+- [Try 5 questions](https://nosunosukawa.github.io/seibisolo-site/demo.html)

@@ -1,0 +1,149 @@
+/* ふりがな整備士 サイト共通。読むためのサイト（GOV.UK・デジタル庁・JLPT に学ぶ）。外部フォントなし */
+:root{
+  --paper:#FAF9F6;--card:#FFFFFF;--ink:#1C2321;--ink2:#4A5552;--line:#DDDAD2;--line2:#C9C5BB;
+  --link:#0B57A4;--link-v:#5B3A8E;--green:#1F6F66;--green-d:#17574F;--green-s:#E8F2F0;
+  --amber-s:#FFF6E0;--amber:#7A4F00;--focus:#FFBF47;
+  --fs:17px;
+  --ja:"BIZ UDPGothic","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic UI","Meiryo","Noto Sans CJK JP",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;font-size:var(--fs)}
+html.fs-l{--fs:20px}html.fs-xl{--fs:23px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ja);font-size:1rem;line-height:1.9;overflow-wrap:anywhere;line-break:strict}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--link);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:visited{color:var(--link-v)}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;box-shadow:0 0 0 2px var(--ink)}
+.skip{position:absolute;left:-999px;top:0;background:var(--focus);color:var(--ink);padding:8px 16px;z-index:9}
+.skip:focus{left:8px;top:8px}
+.w{max-width:1040px;margin:0 auto;padding:0 16px}
+.read{max-width:720px}
+/* ふりがな */
+rt{font-size:.52em;font-weight:400;color:var(--ink2);letter-spacing:0}
+html.noruby rt,html.noruby rp{display:none}
+html:not(.noruby) body{line-height:2.15}
+html:not(.noruby) h1,html:not(.noruby) h2,html:not(.noruby) h3{line-height:1.8}
+/* 上の帯 */
+.top{background:var(--card);border-bottom:1px solid var(--line)}
+.top-in{display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none;font-size:1.05rem;line-height:1.3}
+.brand:visited{color:var(--ink)}
+.brand img{width:32px;height:32px;border-radius:7px}
+.tools{margin-left:auto;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.tool{font:inherit;font-size:14px;line-height:1.2;min-height:36px;padding:6px 12px;border:1px solid var(--line2);border-radius:8px;background:var(--card);color:var(--ink);cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.tool:visited{color:var(--ink)}
+.tool[aria-pressed=true]{background:var(--green-s);border-color:var(--green);color:var(--green-d);font-weight:700}
+.lang-row{background:#F1EFE9;border-bottom:1px solid var(--line);font-size:14px;line-height:1.5}
+.lang-row ul{list-style:none;margin:0;padding:6px 0;display:flex;flex-wrap:wrap;gap:2px 14px}
+.lang-row a{display:inline-block;padding:3px 0}
+.lang-row .now{font-weight:700;color:var(--ink);text-decoration:none}
+.nav{background:var(--green-d)}
+.nav ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,auto);justify-content:start;gap:0 4px}
+.nav a{display:block;color:#fff;text-decoration:none;padding:10px 14px;line-height:1.4;font-weight:700;font-size:15px}
+.nav a:hover,.nav a[aria-current]{background:rgba(255,255,255,.14);text-decoration:underline;text-underline-offset:.2em}
+.nav rt{color:#d8ece8}
+@media(max-width:640px){.nav ul{grid-template-columns:1fr 1fr 1fr}.nav a{padding:10px 8px;font-size:14px}}
+.crumb{font-size:14px;color:var(--ink2);padding:12px 0 0;line-height:1.7}
+.crumb ol{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 6px}
+.crumb li+li::before{content:"›";margin-right:6px;color:var(--ink2)}
+/* 本文 */
+main{padding:8px 0 48px}
+h1{font-size:1.75rem;line-height:1.5;margin:20px 0 12px;word-break:auto-phrase}
+h2{font-size:1.32rem;line-height:1.55;margin:44px 0 10px;padding-top:6px;border-top:2px solid var(--ink);word-break:auto-phrase}
+h3{font-size:1.08rem;line-height:1.6;margin:26px 0 6px}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:1.4em}
+li{margin:0 0 6px}
+.lead{font-size:1.08rem}
+.meta{font-size:14px;color:var(--ink2);line-height:1.7}
+.small{font-size:14px;color:var(--ink2);line-height:1.8}
+strong{font-weight:700}
+.tbl{overflow-x:auto;margin:0 0 16px}
+table{border-collapse:collapse;width:100%;background:var(--card);font-size:.94rem;line-height:1.7}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#F1EFE9;font-weight:700}
+td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+caption{text-align:left;font-size:14px;color:var(--ink2);padding:0 0 6px;caption-side:top}
+.note{background:var(--amber-s);border-left:5px solid #C98A12;padding:12px 16px;margin:0 0 18px}
+.note>:last-child{margin-bottom:0}
+.notice{background:var(--amber-s);border-bottom:1px solid #E8D7A8}
+.notice .w{padding-top:10px;padding-bottom:10px}
+.notice strong{display:block}
+.info{background:var(--green-s);border-left:5px solid var(--green);padding:12px 16px;margin:0 0 18px}
+.info>:last-child{margin-bottom:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
+.card h3{margin-top:0}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin:0 0 16px}
+.doors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin:0 0 16px;list-style:none;padding:0}
+.doors li{margin:0}
+.door{display:block;height:100%;background:var(--card);border:1px solid var(--line2);border-radius:10px;padding:14px 16px;text-decoration:none;color:var(--ink)}
+.door:visited{color:var(--ink)}
+.door:hover{border-color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+.door b{display:block;color:var(--link);font-size:1.08rem;line-height:1.6;text-decoration:underline;text-underline-offset:.18em;text-decoration-thickness:1px}
+.door span{display:block;font-size:.92rem;color:var(--ink2);line-height:1.75;margin-top:4px}
+.links{list-style:none;padding:0;margin:0 0 16px;border-top:1px solid var(--line)}
+.links li{border-bottom:1px solid var(--line);padding:10px 0;margin:0}
+.links a{font-weight:700}
+.links span{display:block;font-size:.92rem;color:var(--ink2);line-height:1.75}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:8px;background:var(--green-d);color:#fff;font-weight:700;text-decoration:none;line-height:1.4}
+.btn:visited{color:#fff}.btn:hover{background:#0F443D;text-decoration:underline}
+.btn2{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:8px;border:2px solid var(--green-d);color:var(--green-d);background:var(--card);font-weight:700;text-decoration:none;line-height:1.4}
+.btn2:visited{color:var(--green-d)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.ok li,.ng li{list-style:none;position:relative;padding-left:1.5em}
+.ok,.ng{padding-left:0}
+.ok li::before{content:"○";position:absolute;left:0;color:var(--green);font-weight:700}
+.ng li::before{content:"×";position:absolute;left:0;color:#A33A2E;font-weight:700}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:0 0 20px;font-size:.94rem}
+.toc b{display:block}
+.toc ul{margin:4px 0 0;padding-left:1.2em}.toc li{margin:0}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin:0 0 8px;padding:0 14px}
+summary{cursor:pointer;font-weight:700;padding:10px 0;line-height:1.6}
+details[open] summary{border-bottom:1px solid var(--line);margin-bottom:10px}
+figure{margin:0 0 16px}figcaption{font-size:14px;color:var(--ink2);line-height:1.7;margin-top:6px}
+.shots{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}
+.shots img{border:1px solid var(--line);border-radius:10px}
+.pagefoot{margin-top:40px;padding-top:12px;border-top:1px solid var(--line);font-size:14px;color:var(--ink2);line-height:1.8}
+/* 問題カード */
+.q{background:var(--card);border:1px solid var(--line2);border-radius:10px;padding:14px 18px;margin:0 0 16px}
+.q .src{font-size:13px;color:var(--ink2)}
+.q .stem{font-size:1.18rem;font-weight:700;line-height:2.2;margin:4px 0 10px}
+.q.off rt{visibility:hidden}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.tr{background:#F1EFE9;border-radius:8px;padding:10px 14px;line-height:1.8}
+.tr b{display:block;font-size:12px;color:var(--ink2);font-weight:700}
+/* 足元 */
+.foot{background:#22302D;color:#E8ECEA;padding:32px 0;font-size:14px;line-height:1.8}
+.foot a,.foot a:visited{color:#fff}
+.foot h2{border:0;font-size:15px;margin:0 0 6px;padding:0;color:#fff}
+.foot rt{color:#c9d4d1}
+.foot-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px;margin-bottom:22px}
+.foot ul{list-style:none;padding:0;margin:0}.foot li{margin:0 0 4px}
+.foot .disc{border-top:1px solid #4a5a56;padding-top:14px}
+/* ことば（多言語） */
+:lang(ne){font-family:"Noto Sans Devanagari","Kohinoor Devanagari","Nirmala UI",system-ui,sans-serif;line-height:1.95}
+:lang(si){font-family:"Noto Sans Sinhala","Sinhala Sangam MN","Nirmala UI",system-ui,sans-serif;line-height:2}
+:lang(my){font-family:"Noto Sans Myanmar","Myanmar Sangam MN","Myanmar Text",system-ui,sans-serif;line-height:2.2}
+:lang(zh-Hans){font-family:"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",system-ui,sans-serif}
+:lang(en),:lang(vi),:lang(id){font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
+.w-row{border-bottom:1px solid var(--line);padding:14px 0}
+.w-row h3{margin:0;font-size:1.25rem}
+.w-row .tr{margin:6px 0}
+.w-row .ex{font-size:.94rem;color:var(--ink2)}
+@media print{.top,.nav,.lang-row,.foot,.notice,.skip,.crumb{display:none}body{background:#fff}main{padding:0}}
+@page{size:A4;margin:14mm}
+@media print{html{--fs:13.5px}html:not(.noruby) body{line-height:1.8}h1{margin:0 0 6px;font-size:1.5rem}.pagefoot,[data-print-hide]{display:none}table{font-size:.92rem}th,td{padding:4px 8px}main{padding:0}}
+html.noruby ruby{display:inline}
+.tools .tool{min-width:44px;justify-content:center}
+@media(max-width:640px){
+ .lang-row{font-size:13px}.lang-row ul{gap:0 10px;padding:3px 0}.lang-row a{padding:1px 0}
+ .top-in{flex-wrap:nowrap;padding:8px 0;gap:8px}.brand{font-size:.98rem;gap:8px}.brand img{width:28px;height:28px}
+ .tool{padding:6px 8px;font-size:13px}
+ .nav a{padding:7px 6px;font-size:13.5px;text-align:center}
+ h1{font-size:1.38rem;line-height:1.55;margin-top:14px}h2{font-size:1.18rem;margin-top:34px}
+ .notice{font-size:.92rem}.notice .w{padding-top:7px;padding-bottom:7px}
+ .lead{font-size:1rem}
+}
+.top-in{padding-left:16px!important;padding-right:16px!important}

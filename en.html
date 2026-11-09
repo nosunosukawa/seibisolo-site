@@ -1,191 +1,85 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="noruby">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Furigana Seibishi — Japanese automotive mechanic exam past questions with furigana and translations</title>
-<meta name="description" content="An iPhone and iPad app for foreign students and mechanics in Japan preparing for the national automotive mechanic exam (written, grades 1, 2 and 3). Past questions in the original Japanese, with furigana on every kanji, AI reference translations in 7 languages and an explanation for every choice.">
+<title>Furigana Seibishi — study Japan’s automotive mechanic exam, even if Japanese is not your first language｜ふりがな整備士</title>
+<meta name="description" content="An app and an information site for the written exams of Japan’s automotive mechanic qualification: past questions with furigana on every kanji and AI-made reference translations in 7 languages. What it can and cannot do, and how it is made.">
 <link rel="canonical" href="https://nosunosukawa.github.io/seibisolo-site/en.html">
 <link rel="alternate" hreflang="ja" href="https://nosunosukawa.github.io/seibisolo-site/">
 <link rel="alternate" hreflang="en" href="https://nosunosukawa.github.io/seibisolo-site/en.html">
+<link rel="alternate" hreflang="ne" href="https://nosunosukawa.github.io/seibisolo-site/lang/ne.html">
+<link rel="alternate" hreflang="zh-Hans" href="https://nosunosukawa.github.io/seibisolo-site/lang/zh.html">
+<link rel="alternate" hreflang="vi" href="https://nosunosukawa.github.io/seibisolo-site/lang/vi.html">
+<link rel="alternate" hreflang="id" href="https://nosunosukawa.github.io/seibisolo-site/lang/id.html">
+<link rel="alternate" hreflang="si" href="https://nosunosukawa.github.io/seibisolo-site/lang/si.html">
+<link rel="alternate" hreflang="my" href="https://nosunosukawa.github.io/seibisolo-site/lang/my.html">
 <link rel="alternate" hreflang="x-default" href="https://nosunosukawa.github.io/seibisolo-site/">
-<meta property="og:title" content="Furigana Seibishi — automotive mechanic exam past questions with furigana and translations">
-<meta property="og:description" content="Study Japan's automotive mechanic exam in Japanese, with furigana and reference translations in 7 languages.">
+<meta property="og:title" content="Furigana Seibishi — study Japan’s automotive mechanic exam, even if Japanese is not your first language">
+<meta property="og:description" content="An app and an information site for the written exams of Japan’s automotive mechanic qualification: past questions with furigana on every kanji and AI-made reference translations in 7 languages. What it can and cannot do, and how it is made.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nosunosukawa.github.io/seibisolo-site/en.html">
-<meta property="og:site_name" content="ふりがな整備士 (Furigana Seibishi)">
-<meta property="og:locale" content="en_US">
-<meta property="og:locale:alternate" content="ja_JP">
-<meta name="twitter:card" content="summary">
-<link rel="icon" href="img/icon.png">
+<meta property="og:site_name" content="ふりがな整備士">
+<meta property="og:image" content="https://nosunosukawa.github.io/seibisolo-site/img/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6827350748">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":"MobileApplication","@id":"https://nosunosukawa.github.io/seibisolo-site/en.html#app","name":"ふりがな整備士 (Furigana Seibishi)","alternateName":["Furigana Seibishi","整備士過去問"],"url":"https://nosunosukawa.github.io/seibisolo-site/en.html","installUrl":"https://apps.apple.com/jp/app/id6827350748","sameAs":["https://apps.apple.com/jp/app/id6827350748","https://nosunosukawa.github.io/seibisolo-site/"],"operatingSystem":"iOS 16.4 or later","applicationCategory":"EducationalApplication","inLanguage":["ja","en","ne","zh","si","vi","my","id"],"description":"An iPhone and iPad app for practicing past questions of Japan's national automotive mechanic exam (Automotive Maintenance Skill Registration Examination, written part: grade 1 small vehicles, grade 2, grade 3). The questions stay in the original Japanese, with furigana on every kanji, AI-generated reference translations of questions and explanations in English, Nepali, Chinese, Sinhala, Vietnamese, Burmese and Indonesian, and an explanation for every choice. Not endorsed by JASPA.","audience":{"@type":"EducationalAudience","educationalRole":"student","audienceType":"Foreign students and mechanics in Japan (e.g. Specified Skilled Worker visa holders) preparing for the automotive mechanic exam"},"educationalUse":"Exam preparation","offers":[{"@type":"Offer","name":"Comprehensive practice set (one per grade)","price":"0","priceCurrency":"JPY"},{"@type":"Offer","name":"Grade 3, all questions","price":"980","priceCurrency":"JPY"},{"@type":"Offer","name":"Grade 2, all questions","price":"1500","priceCurrency":"JPY"},{"@type":"Offer","name":"Grade 1, all questions","price":"1800","priceCurrency":"JPY"}],"dateModified":"2026-11-07"},
-{"@type":"FAQPage","inLanguage":"en","mainEntity":[
-{"@type":"Question","name":"Is the exam in English?","acceptedAnswer":{"@type":"Answer","text":"No. The automotive mechanic exam in Japan is in Japanese only. This app keeps every question in the original Japanese and adds furigana and reference translations to help you understand it. You can turn furigana off to practice in exam conditions."}},
-{"@type":"Question","name":"When does the exam change to the comprehensive (総合) format?","acceptedAnswer":{"@type":"Answer","text":"For grades 2 and 3, the written exam becomes a single comprehensive exam from 14 March 2027. For grade 1 (small vehicles), March 2028 at the earliest. There are no past comprehensive exam questions yet; the app re-organizes earlier past questions into the comprehensive exam's fields."}},
-{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"One full comprehensive practice set per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50) is free. All questions for a grade are a one-time purchase: JPY 980 (grade 3), JPY 1,500 (grade 2), JPY 1,800 (grade 1). No subscription."}},
-{"@type":"Question","name":"Are the translations correct?","acceptedAnswer":{"@type":"Answer","text":"Translations and explanations are AI-generated references. If the meaning differs, the Japanese question is correct."}},
-{"@type":"Question","name":"Is this an official JASPA app?","acceptedAnswer":{"@type":"Answer","text":"No. It is made by an individual and is not endorsed or supervised by JASPA (Japan Automobile Service Promotion Association). The questions are the past exam questions that JASPA publishes on its website. In October 2026 the developer asked JASPA in writing about offering them with furigana, translations and explanations in an app, and were told that permission is not required."}},
-{"@type":"Question","name":"Will this app make me pass?","acceptedAnswer":{"@type":"Answer","text":"No app can promise that. It is a tool for practicing past questions."}}
-]}
-]}
-</script>
-<style>
-:root{--teal:#0F766E;--teal-deep:#1F7A6D;--bg:#FFFFFF;--bg-soft:#F3F8F7;--ink:#1A1F1E;--ink-2:#4B5856;--amber:#B45309;--line:#D9E5E2}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Hiragino Sans","Noto Sans JP",sans-serif;font-size:16px;line-height:1.7;overflow-wrap:anywhere}
-img{max-width:100%;height:auto;display:block}
-.wrap{max-width:720px;margin:0 auto;padding:0 16px}
-section{padding:48px 0}
-section.soft{background:var(--bg-soft)}
-h1,h2,h3{line-height:1.35;margin:0 0 14px}
-h1{font-size:28px}h2{font-size:23px}h3{font-size:18px;margin-bottom:6px}
-p{margin:0 0 14px}
-a{color:var(--teal)}
-.site{background:var(--teal-deep);color:#fff}
-.site .wrap{display:flex;align-items:center;flex-wrap:wrap;gap:4px 14px;padding-top:8px;padding-bottom:8px;font-size:14px}
-.site a{color:#fff;text-decoration:none;min-height:32px;display:inline-flex;align-items:center}
-.site .brand{font-weight:700;font-size:16px;margin-right:auto}
-.site nav{display:flex;flex-wrap:wrap;gap:0 14px}
-.tag{display:inline-block;font-size:13px;font-weight:700;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:2px 12px;margin-bottom:12px}
-.sub{color:var(--ink-2);font-size:17px}
-.note{font-size:13px;color:var(--ink-2)}
-.cta{display:flex;align-items:center;justify-content:center;min-height:56px;padding:12px 24px;border-radius:12px;background:var(--teal);color:#fff;font-weight:700;font-size:18px;text-decoration:none;width:100%}
-.ghost{display:flex;align-items:center;justify-content:center;min-height:48px;margin:12px 0 0;border:1px solid var(--teal);border-radius:12px;background:#fff;color:var(--teal);font-weight:700;text-decoration:none}
-.cta:focus-visible,.ghost:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
-.tools{list-style:none;padding:0;margin:20px 0;display:grid;gap:12px}
-.tools li{border:1px solid var(--line);border-radius:12px;padding:16px;background:#fff}
-.tools p{margin:0}
-.shots{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
-.shots img{border-radius:12px;border:1px solid var(--line)}
-.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:20px 0;text-align:center}
-.grades>div{border:1px solid var(--line);border-radius:12px;padding:14px 4px;background:#fff}
-.grades .g{font-weight:700;color:var(--teal)}
-.grades .n{font-size:28px;font-weight:700;color:var(--amber);line-height:1.3}
-.grades .u{font-size:13px;color:var(--ink-2)}
-ul.plain{padding-left:1.2em;margin:0 0 14px}
-details{border:1px solid var(--line);border-radius:12px;background:#fff;margin:0 0 10px}
-summary{cursor:pointer;padding:12px 16px;font-weight:700;min-height:44px}
-details p{padding:0 16px 4px}
-footer{background:var(--teal-deep);color:#fff;padding:32px 0;font-size:13px}
-footer a{color:#fff}
-footer p{margin:0 0 8px}
-.fnav{display:flex;flex-wrap:wrap;gap:4px 16px;margin:0 0 16px}
-
-/* PC の広い画面（2026-11-07 社長「PCでみるとせまくない？」）: 幅を広げ、1画面目は左に見出しと CTA・右に問題カード。並べられる箱は横に並べる。長い文は読みやすい幅のまま */
-@media (min-width:960px){
-.wrap{max-width:1080px;padding:0 32px}
-h1{font-size:40px}
-h2{font-size:30px}
-section .wrap>p,section .wrap>h2{max-width:760px}
-.hero{padding:48px 0 72px}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px;align-items:start}
-.hero .wrap>*{grid-column:1}
-.hero .tag{justify-self:start}
-.hero .qcard{grid-column:2;grid-row:1 / span 8;margin:0}
-.langs{flex-wrap:wrap;overflow-x:visible;margin:12px 0 8px;padding:0}
-.two{grid-template-columns:1fr 1fr}
-.tools{grid-template-columns:1fr 1fr}
-.shots{grid-template-columns:repeat(4,1fr)}
-.facts{grid-template-columns:repeat(3,1fr)}
-.site .wrap{font-size:14px}
-}
-</style>
+<link rel="icon" href="./img/icon.png"><link rel="apple-touch-icon" href="./img/icon.png">
+<link rel="stylesheet" href="./assets/site.css">
+<script>(function(){try{var f=localStorage.getItem('fs');if(f)document.documentElement.classList.add(f)}catch(e){}})()</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://nosunosukawa.github.io/seibisolo-site/"},{"@type":"ListItem","position":2,"name":"Furigana Seibishi — study Japan’s automotive mechanic exam, even if Japanese is not your first language","item":"https://nosunosukawa.github.io/seibisolo-site/en.html"}]}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="lang-row"><div class="w"><ul><li lang="ja"><a href="./">日本語</a></li><li lang="en"><a href="./en.html" class="now" aria-current="page">English</a></li><li lang="ne"><a href="./lang/ne.html">नेपाली</a></li><li lang="zh-Hans"><a href="./lang/zh.html">中文</a></li><li lang="vi"><a href="./lang/vi.html">Tiếng Việt</a></li><li lang="id"><a href="./lang/id.html">Bahasa Indonesia</a></li><li lang="si"><a href="./lang/si.html">සිංහල</a></li><li lang="my"><a href="./lang/my.html">မြန်မာ</a></li></ul></div></div>
+<header class="top"><div class="w top-in">
+<a class="brand" href="./"><img src="./img/icon.png" alt="" width="32" height="32"><span>ふりがな整備士</span></a>
+<div class="tools"><button class="tool" id="t-size" type="button" aria-pressed="false" aria-label="Text size" data-noruby><span>A＋</span></button></div>
+</div></header>
 
-<div class="site"><div class="wrap"><a class="brand" href="en.html">Furigana Seibishi</a><nav aria-label="Site"><a href="demo.html">Try 5 questions</a><a href="sogo.html" hreflang="ja">2027 exam change (JA)</a><a href="./" lang="ja" hreflang="ja">日本語</a></nav></div></div>
-
-<header class="wrap" style="padding-top:24px;padding-bottom:40px">
-  <span class="tag">Automotive mechanic exam, grades 1, 2 and 3 (written)</span>
-  <h1>Past exam questions in Japanese — with furigana and reference translations in 7 languages.</h1>
-  <p class="sub">The exam is in Japanese only. This app keeps every question in the original Japanese, so you can check how to read each word and what it means while you solve it.</p>
-  <p><span lang="ja">ふりがな整備士</span> (Furigana Seibishi) is an iPhone and iPad app for foreign students and mechanics in Japan preparing for the national Automotive Maintenance Skill Registration Examination.</p>
-  <a class="cta" href="https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&amp;ct=lp_en&amp;mt=8">View on the App Store</a>
-  <a class="ghost" href="demo.html">Try 5 questions in your browser ›</a>
-  <p class="note" style="margin-top:8px;text-align:center">The demo page is in Japanese. Choose "English" to see the reference translation.</p>
-</header>
-
-<section class="soft">
-  <div class="wrap">
-    <h2>Four tools for every question</h2>
-    <ol class="tools">
-      <li><h3>Furigana</h3><p>On every kanji in questions, choices and explanations. Turn it off with one button to practice in exam conditions.</p></li>
-      <li><h3>Reference translations in 7 languages</h3><p>For questions and explanations: English, Nepali, Chinese, Vietnamese, Indonesian, Sinhala and Burmese. Translations are AI-generated references; if the meaning differs, the Japanese text is correct.</p><p class="note">Sinhala and Burmese cover only part of the grade 2 body and electrical questions.</p></li>
-      <li><h3>An explanation for every choice</h3><p>See why each choice is right or wrong, one by one.</p></li>
-      <li><h3>Technical terms in your language</h3><p>Look up the automotive terms used in each question, plus a list of basic words that often appear in the exam.</p></li>
-    </ol>
-    <div class="shots">
-      <img src="img/lp/02-why.webp" alt="Screen with an explanation for each choice (Japanese UI)" loading="lazy" width="600" height="1303">
-      <img src="img/lp/07-glossary.webp" alt="Screen with translations of technical terms (Japanese UI)" loading="lazy" width="600" height="1303">
-    </div>
-    <p class="note">Built from experience running exam-prep classes at a mechanic school.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>How you can practice</h2>
-    <ul class="plain">
-      <li><b>Pass Pack</b> — a set of frequently tested questions, chosen from past exam trends and the new comprehensive textbooks: grade 3 500, grade 2 600, grade 1 450 questions. It gives you 20 questions at a time from the ones you have not mastered yet.</li>
-      <li><b>Full past exams</b> — the same number of questions as the real exam, with remaining time and a pass/fail result.</li>
-      <li><b>Practice questions for the new fields</b> — the comprehensive exam from March 2027 adds new fields such as electronic control systems. Where past questions do not cover them, the app adds original practice questions written for the scope of the new comprehensive exam. <b>We will keep adding more.</b> When you buy a grade, new questions for that grade are included at no extra cost. (Practice questions are not real exam questions and are labeled as such.)</li>
-      <li><b>By field</b>, <b>retry your mistakes and favorites</b>, and <b>scores by field</b>.</li>
-      <li><b>Offline, no account</b> — works without internet, no sign-up, and no personal data is collected.</li>
-    </ul>
-    <div class="shots">
-      <img src="img/lp/05-pass-pack.webp" alt="Pass Pack screen (Japanese UI)" loading="lazy" width="600" height="1303">
-      <img src="img/lp/06-real-format.webp" alt="Full past exam screen (Japanese UI)" loading="lazy" width="600" height="1303">
-    </div>
-  </div>
-</section>
-
-<section class="soft">
-  <div class="wrap">
-    <h2>What is included</h2>
-    <p>Past questions of the written Automotive Maintenance Skill Registration Examination, as published by JASPA (Japan Automobile Service Promotion Association): grades 2 and 3 from October 2016 to October 2026, and grade 1 (small vehicles) from March 2017 to March 2026.</p>
-    <p>From <b>14 March 2027</b>, the grade 2 and grade 3 written exams change to a single “comprehensive” (総合) exam; grade 1 changes from March 2028 at the earliest. There are no past comprehensive exam questions yet. The app re-organizes earlier past questions into the comprehensive exam's fields (engine, chassis, electronic control, equipment and basics, regulations).</p>
-    <p>Questions, choices and answers were checked against the original question papers and answer sheets. In October 2026 the developer asked JASPA in writing about offering the questions with furigana, translations and explanations in an app, and were told that permission is not required.</p>
-    <p class="note">This app is made by an individual. It is not endorsed or supervised by JASPA.</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <h2>Try before you buy</h2>
-    <p>One full “comprehensive practice set” per grade (one exam's worth: grade 2 40 questions, grade 3 30, grade 1 50) is free to solve completely. All questions for a grade are a one-time purchase. No subscription.</p>
-    <div class="grades">
-      <div><div class="g">Grade 3</div><div class="n">¥980</div><div class="u">one-time</div></div>
-      <div><div class="g">Grade 2</div><div class="n">¥1,500</div><div class="u">one-time</div></div>
-      <div><div class="g">Grade 1</div><div class="n">¥1,800</div><div class="u">one-time</div></div>
-    </div>
-    <a class="cta" href="https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&amp;ct=lp_en&amp;mt=8">View on the App Store</a>
-    <p class="note" style="margin-top:8px;text-align:center">iPhone and iPad, iOS 16.4 or later. On the home screen the app is shown as 「整備士過去問」.</p>
-  </div>
-</section>
-
-<section class="soft">
-  <div class="wrap">
-    <h2>Questions</h2>
-    <details open><summary>Is the exam in English?</summary><p>No. The automotive mechanic exam in Japan is in Japanese only. This app keeps every question in the original Japanese and adds furigana and reference translations to help you understand it. You can turn furigana off to practice in exam conditions.</p></details>
-    <details><summary>When does the exam change to the comprehensive (総合) format?</summary><p>For grades 2 and 3, from 14 March 2027. For grade 1 (small vehicles), March 2028 at the earliest. There are no past comprehensive exam questions yet; the app re-organizes earlier past questions into the comprehensive exam's fields.</p></details>
-    <details><summary>Is it free?</summary><p>One full comprehensive practice set per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50) is free. All questions for a grade are a one-time purchase: JPY 980 (grade 3), JPY 1,500 (grade 2), JPY 1,800 (grade 1). No subscription.</p></details>
-    <details><summary>Are the translations correct?</summary><p>Translations and explanations are AI-generated references. If the meaning differs, the Japanese question is correct.</p></details>
-    <details><summary>Is this an official JASPA app?</summary><p>No. It is made by an individual and is not endorsed or supervised by JASPA (Japan Automobile Service Promotion Association). The questions are the past exam questions that JASPA publishes on its website. In October 2026 the developer asked JASPA in writing about offering them with furigana, translations and explanations in an app, and were told that permission is not required.</p></details>
-    <details><summary>Will this app make me pass?</summary><p>No app can promise that. It is a tool for practicing past questions.</p></details>
-    <p style="margin-top:20px">Schools and organizations: we are considering a way to introduce the app for a whole class (Apple School Manager). If you are interested, please email us with the number of students and the grades you need.</p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <nav class="fnav" aria-label="Footer"><a href="en.html">English</a><a href="./" lang="ja" hreflang="ja">日本語</a><a href="demo.html">Try 5 questions</a><a href="screens.html">Screens</a><a href="support.html">Support</a><a href="privacy.html">Privacy</a><a href="mailto:nosunosukawa@gmail.com">Contact</a></nav>
-    <p>This app is made by an individual and is not endorsed or supervised by JASPA (一般社団法人 日本自動車整備振興会連合会). The questions are the written Automotive Maintenance Skill Registration Examination questions published by JASPA.</p>
-    <p>Translations and explanations are AI-generated references. If the meaning differs, the Japanese text is correct.</p>
-  </div>
-</footer>
-</body>
-</html>
+<div class="w read"><main id="main"><h1>Study Japan’s automotive mechanic exam, even if Japanese is not your first language</h1><p class="lead">Furigana Seibishi is an iPhone and iPad app of past questions from the written part of the exam (Automotive Maintenance Skill Registration Examination; grade 1 small vehicles, grade 2, grade 3). It is made by one person, a teacher who has run exam-prep classes at a mechanic school.</p>
+<div class="note"><p><strong>A single “comprehensive” (総合) written exam for grades 2 and 3 starts on 14 March 2027.</strong> Some earlier exam types are still listed for that sitting. Applications for that sitting are accepted from 14 to 18 December 2026 at your local Automobile Service Promotion Association (自動車整備振興会). Please check the official notice.</p></div>
+<h2>What it does</h2>
+<ul>
+<li>The questions stay in the original Japanese, because the exam is in Japanese. Furigana can be shown on every kanji, and switched off.</li>
+<li>AI-made reference translations of questions and explanations: English, Nepali, Chinese, Vietnamese, Indonesian, Sinhala and Burmese.</li>
+<li>An explanation of why each choice is right or wrong.</li>
+<li>After purchase: past questions by sitting (with a timer and an estimated pass/fail), by field, a “Pass Pack” selected from past questions (it does not predict the exam), and retrying the ones you got wrong.</li>
+<li>Works offline. No account. No personal data collected.</li>
+</ul>
+<h2>What it does not do</h2>
+<ul>
+<li>It does not guarantee that you will pass.</li>
+<li>It is not on Android yet (in preparation, no date). The <a href="./demo.html">5-question trial</a> works in any browser.</li>
+<li>It has no practical or oral exam practice.</li>
+<li>There are no past papers of the comprehensive exam, because it has not been held yet. The app re-organizes earlier past questions into the new fields and adds original practice questions, which are labeled as not real exam questions.</li>
+<li>It is not endorsed or supervised by JASPA (日整連).</li>
+<li>Translations may contain mistakes. The Japanese text is always the correct one. Burmese and Sinhala are missing or partial for grade 2 body and electrical questions.</li>
+</ul>
+<h2>Cost</h2>
+<div class="tbl"><table>
+<tr><th scope="row">Free</th><td>One full “comprehensive practice set” per grade (grade 2: 40 questions, grade 3: 30, grade 1: 50), with explanations and translations. About 90% are past questions and about 10% are original questions, not real exam questions. It does not predict the exam.</td></tr>
+<tr><th scope="row">One-time purchase per grade</th><td>Grade 3 ¥980, grade 2 ¥1,500, grade 1 ¥1,800. No subscription.</td></tr>
+<tr><th scope="row">Elsewhere, free</th><td>JASPA publishes <a href="https://www.jaspa.or.jp/mechanic/past/" rel="noopener">past questions and answers</a> on its website (Japanese only, no furigana or explanations).</td></tr>
+</table></div>
+<div class="acts"><a class="btn" href="https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&amp;ct=lp_en&amp;mt=8">See it on the App Store</a><a class="btn2" href="./demo.html">Try 5 questions in your browser</a></div>
+<p class="small">iPhone and iPad, iOS 16.4 or later. On the home screen it appears as 「整備士過去問」.</p>
+<h2>The exam, in short</h2>
+<div class="tbl"><table>
+<caption>From JASPA’s notice for the sitting of March 2027. Always check the latest official notice.</caption>
+<tr><th scope="row">Grade 2 (comprehensive)</th><td>40 questions, 80 minutes</td></tr>
+<tr><th scope="row">Grade 3 (comprehensive)</th><td>30 questions, 60 minutes</td></tr>
+<tr><th scope="row">Grade 1 small vehicles</th><td>50 questions, 100 minutes. Comprehensive exam from March 2028 at the earliest.</td></tr>
+<tr><th scope="row">Format</th><td>Choose 1 of 4, mark sheet, HB pencil. A basic calculator is allowed.</td></tr>
+<tr><th scope="row">Fee (written)</th><td>¥12,500 (grade 1: ¥13,500)</td></tr>
+</table></div>
+<h2>A tip: read the end of the question</h2>
+<p>About 4 in 10 past questions (2,144 of 5,371 in the app) ask for the <strong>incorrect</strong> one: 「不適切なものはどれか」. See the <a href="./exam/words.html">30 most common words in exam questions</a>, with translations, free.</p>
+<h2>How it is made</h2>
+<p>Questions, choices and answers are checked against the question papers and answer sheets. Explanations and translations are made with AI and are still being reviewed. In October 2026 the developer asked JASPA in writing about offering the published questions with furigana, translations and explanations in an app; JASPA replied that permission is not required. This is not an endorsement. <a href="./about/editorial.html">Full policy (Japanese)</a></p>
+<p>Found a mistake? Please tell us in any language: <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a>. Schools and employers are welcome to ask too (<a href="./school/">Japanese page</a>).</p>
+<p><a href="./privacy.html">Privacy policy</a> · <a href="./support.html">Support</a></p>
+<div class="pagefoot">Last updated: 2026-11-09 · <a href="mailto:nosunosukawa@gmail.com">Report a mistake</a></div></main></div>
+<footer class="foot"><div class="w"><p class="disc">This app and site are made by an individual and are not endorsed or supervised by JASPA.<br>© 2026 Nosu Works · <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a></p></div></footer>
+<script src="./assets/site.js" defer></script>
+</body></html>
