@@ -233,3 +233,4 @@ html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
 .news li{grid-template-columns:12em 4.5em minmax(0,1fr)}
 @media(max-width:640px){.news li{grid-template-columns:auto minmax(0,1fr)}}
 @media(max-width:640px){.search{flex:1 1 0;min-width:0}.search input{width:0;flex:1 1 auto}.search button{padding:6px 10px}.tools{flex-wrap:nowrap}.tools:not(:has(.search)){flex:0 0 auto;margin-left:auto}.top-in{flex-wrap:wrap}}
+@media(max-width:640px){.sr{left:0;right:auto;width:calc(100vw - 32px)}}
