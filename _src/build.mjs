@@ -76,6 +76,7 @@ const urlOf=o=>o.replace(/index\.html$/,'');
 const sitemap=[];const searchIndex=[];
 for(const pg of all){
   const {meta:M,out}=pg;const depth=out.split('/').length-1,up='../'.repeat(depth);
+  if(M.raw){const html=pg.body.replace(/@\//g,up||'./').replaceAll('{{STORE}}',STORE);const b=html.indexOf('<body');const dest=path.join(ROOT,out);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html.slice(0,b)+addRuby(html.slice(b)));continue}
   const lang=M.lang||'ja',isJa=lang==='ja';
   const rel=s=>s.replace(/@\//g,up||'./').replace(/\.\/\.\//g,'./');
   const here=urlOf(out);

@@ -1,0 +1,245 @@
+<!--{"title":"トップ試作B","raw":true,"noindex":true}-->
+<!doctype html>
+<html lang="ja" class="noruby">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>トップ試作B</title>
+<meta name="robots" content="noindex">
+<script>(function(){var d=document.documentElement,r=null;try{r=localStorage.getItem('ruby')}catch(e){}if(r==='1'||(r===null&&!/^ja/i.test(navigator.language||'ja')))d.classList.remove('noruby')})()</script>
+<style>
+:root{--ink:#141414;--ink2:#5A5A5A;--ink3:#8A8A8A;--line:#E6E4DF;--paper:#F6F4EF;--red:#C8381A;--link:#141414}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--ink);font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Yu Gothic UI","Meiryo",system-ui,sans-serif;font-size:17px;line-height:1.85;letter-spacing:.02em;line-break:strict;overflow-wrap:anywhere}
+a{color:var(--link);text-decoration:underline;text-decoration-color:#B9B6AE;text-underline-offset:.22em;text-decoration-thickness:1px}
+a:hover{text-decoration-color:var(--ink)}
+:focus-visible{outline:3px solid #F5B400;outline-offset:2px}
+rt{font-size:.5em;color:var(--ink2);letter-spacing:0;font-weight:400}
+html.noruby rt,html.noruby rp{display:none}html.noruby ruby{display:inline}
+html:not(.noruby) body{line-height:2.15}
+.w{max-width:1120px;margin:0 auto;padding:0 32px}
+.proto{background:#141414;color:#fff;font-size:12px;padding:4px 32px;letter-spacing:.04em}
+.langs{font-size:12.5px;color:var(--ink2);border-bottom:1px solid var(--line)}
+.langs .w{display:flex;flex-wrap:wrap;gap:2px 16px;padding-top:7px;padding-bottom:7px;justify-content:flex-end}
+.langs a{color:var(--ink2);text-decoration:none}.langs a:hover{color:var(--ink);text-decoration:underline}
+.langs b{color:var(--ink)}
+header .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:22px;flex-wrap:wrap}
+.mark{text-decoration:none;color:var(--ink);font-weight:700;font-size:19px;letter-spacing:.06em}
+.mark small{font-weight:400;font-size:12px;color:var(--ink2);margin-left:12px;letter-spacing:.04em}
+nav ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;font-size:14.5px;align-items:center}
+nav a{text-decoration:none}nav a:hover{text-decoration:underline}
+.t{font:inherit;font-size:13px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--ink)}
+.t[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:#fff}
+.hero .w{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:72px;padding-top:56px;padding-bottom:72px;align-items:end}
+.kicker{font-size:13px;color:var(--ink2);letter-spacing:.12em;margin:0 0 18px}
+h1{font-size:clamp(36px,5.2vw,64px);line-height:1.28;letter-spacing:.02em;margin:0 0 26px;font-weight:700;word-break:auto-phrase}
+html:not(.noruby) h1{line-height:1.6}
+.lead{font-size:18px;color:#2B2B2B;margin:0 0 30px;max-width:30em}
+.acts{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.b1{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;padding:13px 26px;border-radius:999px;font-weight:700;font-size:15px}
+.b1:hover{background:#333}
+.b2{font-weight:700;font-size:15px}
+.date{border-top:2px solid var(--ink);padding-top:18px}
+.date .lab{font-size:13px;color:var(--ink2);letter-spacing:.08em;margin:0}
+.date .big{font-size:clamp(68px,9vw,120px);line-height:1;font-weight:700;letter-spacing:-.02em;margin:10px 0 6px;font-variant-numeric:tabular-nums}
+.date .big small{font-size:.22em;font-weight:700;letter-spacing:.04em;margin-right:.3em;vertical-align:top;position:relative;top:.55em}
+.date .sub{margin:0 0 18px;font-size:15px}
+.date .sub b{color:var(--red)}
+.date dl{margin:0;font-size:14.5px}
+.date dl div{display:grid;grid-template-columns:5.5em 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}
+.date dt{color:var(--ink2)}.date dd{margin:0}
+.src{font-size:12px;color:var(--ink3);margin:12px 0 0;line-height:1.7}
+.src a{color:var(--ink3)}
+section{padding:88px 0;border-top:1px solid var(--line)}
+section.p{background:var(--paper);border-top:0}
+.h{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:72px}
+.h>*{min-width:0}
+.h2{font-size:clamp(24px,2.6vw,32px);line-height:1.45;margin:0 0 10px;font-weight:700;word-break:auto-phrase}
+.no{font-size:12.5px;color:var(--ink2);letter-spacing:.12em;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.side p{color:#333}
+.pair{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;min-width:0}
+.pair figure{margin:0}
+.pair .paper{background:#fff;border:1px solid var(--line);padding:14px}
+.pair img{width:100%;height:auto;display:block}
+figcaption{font-size:12.5px;color:var(--ink2);margin-top:10px;line-height:1.7}
+.app{background:#fff;border:1px solid var(--line);padding:22px 24px}
+.app .stem{font-size:18px;font-weight:700;line-height:2.25;margin:0 0 14px}
+.app.off rt{visibility:hidden}
+.app .stem b{color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;min-width:0}
+.c{font:inherit;font-size:12.5px;border:1px solid var(--line);background:#fff;border-radius:999px;padding:4px 11px;cursor:pointer;color:var(--ink)}
+.c[aria-pressed=true]{border-color:var(--ink);background:var(--ink);color:#fff}
+.tr{border-top:1px solid var(--line);padding-top:12px;font-size:15px;line-height:1.75}
+.tr small{display:block;font-size:11.5px;color:var(--ink3);letter-spacing:.08em}
+.voice{border-left:3px solid var(--red);padding:4px 0 4px 26px;margin:0}
+.voice p{font-size:clamp(19px,2vw,23px);line-height:1.9;margin:0 0 12px;font-weight:500}
+.voice .ph{color:var(--ink3);border:1px dashed #C9C6BE;padding:14px 18px;font-size:16px;font-weight:400;line-height:1.8}
+.voice cite{font-style:normal;font-size:13px;color:var(--ink2)}
+.idx{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 56px}
+.idx h3{font-size:13px;color:var(--ink2);letter-spacing:.1em;margin:22px 0 4px;font-weight:700}
+.idx ul{list-style:none;margin:0;padding:0}
+.idx li{border-bottom:1px solid var(--line)}
+.idx li a{display:block;position:relative;padding:11px 1.8em 11px 0;text-decoration:none}
+.idx li a:hover{text-decoration:underline}
+.idx li a::after{content:"→";color:var(--ink3);position:absolute;right:0;top:11px}
+.cost{list-style:none;margin:0;padding:0}
+.cost li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;padding:15px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.cost li:first-child{border-top:1px solid var(--ink)}
+.cost b{font-variant-numeric:tabular-nums;white-space:nowrap;font-size:16px}
+.cost small{display:block;color:var(--ink2);font-size:13.5px;line-height:1.7}
+.cant{columns:2;column-gap:56px;margin:0;padding:0;list-style:none}
+.cant li{break-inside:avoid;padding:10px 0 10px 1.4em;border-bottom:1px solid var(--line);position:relative}
+.cant li::before{content:"—";position:absolute;left:0;color:var(--ink3)}
+.small{font-size:14px;color:var(--ink2)}
+footer{border-top:1px solid var(--line);padding:40px 0 56px;font-size:13px;color:var(--ink2);line-height:1.9}
+footer p{margin:0 0 8px;max-width:52em}
+@media(max-width:860px){
+ .w{padding:0 20px}.proto{padding:4px 20px}
+ .hero .w{grid-template-columns:1fr;gap:40px;padding-top:28px;padding-bottom:48px}
+ .h,.pair,.idx{grid-template-columns:1fr;gap:24px}
+ .cant{columns:1}
+ section{padding:56px 0}
+ nav ul{gap:16px;flex-wrap:wrap;font-size:14px}
+ header .w{padding-top:14px;padding-bottom:14px}
+ .mark small{display:block;margin:2px 0 0}
+ .lead{font-size:16.5px}
+}
+</style>
+</head>
+<body>
+<div class="proto" data-noruby>トップの試作 B（未公開）。下層のページはまだ前のデザインです。</div>
+<div class="langs"><div class="w" data-noruby><b>日本語</b><a href="@/en.html" lang="en">English</a><a href="@/lang/ne.html" lang="ne">नेपाली</a><a href="@/lang/zh.html" lang="zh-Hans">中文</a><a href="@/lang/vi.html" lang="vi">Tiếng Việt</a><a href="@/lang/id.html" lang="id">Bahasa Indonesia</a><a href="@/lang/si.html" lang="si">සිංහල</a><a href="@/lang/my.html" lang="my">မြန်မာ</a></div></div>
+<header><div class="w">
+<a class="mark" href="./">ふりがな整備士<small>自動車整備士 学科試験の情報と過去問アプリ</small></a>
+<nav aria-label="サイトの案内"><ul>
+<li><a href="@/exam/">試験</a></li><li><a href="@/app/">アプリ</a></li><li><a href="@/school/">先生へ</a></li><li><a href="@/about/">作り方</a></li>
+<li><button class="t" id="t-ruby" type="button" aria-pressed="false">ふりがな</button></li>
+</ul></nav>
+</div></header>
+
+<main>
+<div class="hero"><div class="w">
+<div>
+<p class="kicker">自動車整備士　1級・2級・3級　学科</p>
+<h1>過去問を、<br>読みながら解く。</h1>
+<p class="lead">本番と同じ日本語の問題文に、ふりがなと7か国語の参考訳。日本語が母語でない人も、ひとりで過去問を始められるように作りました。試験の情報も、ここにまとめています。</p>
+<div class="acts"><a class="b1" href="@/demo.html">5問を解いてみる</a><a class="b2" href="@/exam/">試験について調べる</a></div>
+</div>
+<div class="date">
+<p class="lab">次の学科試験</p>
+<p class="big"><small>2027</small>3.14</p>
+<p class="sub">日曜日　<b data-until="2027-03-14">あと125日</b></p>
+<dl>
+<div><dt>申請</dt><dd>2026年12月14日〜18日<br>各地の自動車整備振興会へ</dd></div>
+<div><dt>2級・3級</dt><dd>この回から「総合」の試験が始まります</dd></div>
+</dl>
+<p class="src">日整連の<a href="https://www.jaspa.or.jp/LinkClick.aspx?fileticket=pFZpfDiRxqk%3D&amp;tabid=703" rel="noopener">令和8年度第2回の案内</a>より。正式な情報は案内でお確かめください。</p>
+</div>
+</div></div>
+
+<section class="p"><div class="w">
+<p class="no">01</p>
+<div class="h">
+<div class="side"><h2 class="h2">本番の問題用紙と、同じ1問。</h2><p>上は、日整連が公開している実際の問題用紙です。ふりがなは付いていません。下は、同じ問題をアプリで読んだところです。</p><p class="small">本番は日本語だけです。訳とふりがなで意味をつかみ、最後は上の問題用紙の形で解けるように練習します。</p></div>
+<div class="pair">
+<figure><div class="paper"><a href="@/img/proto/paper-r8-10-2g-02.jpg" aria-label="問題用紙の画像を大きく開く"><img src="@/img/proto/paper-r8-10-2g-02.jpg" alt="令和8年10月 二級ガソリン No.2 の問題用紙。シリンダ・ヘッドとピストンで形成されるスキッシュ・エリアに関する記述として、適切なものは次のうちどれか。" width="1480" height="505"></a></div><figcaption>令和8年10月 二級ガソリン No.2。日整連「過去の問題と解答」より。押すと大きく開きます</figcaption></figure>
+<figure><div class="app" id="qcard">
+<p class="stem" data-noruby>シリンダ・ヘッドとピストンで<ruby>形成<rp>(</rp><rt>けいせい</rt><rp>)</rp></ruby>されるスキッシュ・エリアに<ruby>関<rp>(</rp><rt>かん</rt><rp>)</rp></ruby>する<ruby>記述<rp>(</rp><rt>きじゅつ</rt><rp>)</rp></ruby>として、<b><ruby>適切<rp>(</rp><rt>てきせつ</rt><rp>)</rp></ruby>なもの</b>は<ruby>次<rp>(</rp><rt>つぎ</rt><rp>)</rp></ruby>のうちどれか。</p>
+<div class="chips"><button class="c" id="q-ruby" type="button" aria-pressed="true">ふりがな</button></div>
+<div class="chips" id="q-langs" role="group" aria-label="訳のことば"><button class="c" data-l="en" aria-pressed="true" lang="en">English</button><button class="c" data-l="ne" aria-pressed="false" lang="ne">नेपाली</button><button class="c" data-l="zh" aria-pressed="false" lang="zh-Hans">中文</button><button class="c" data-l="vi" aria-pressed="false" lang="vi">Tiếng Việt</button><button class="c" data-l="id" aria-pressed="false" lang="id">Indonesia</button><button class="c" data-l="si" aria-pressed="false" lang="si">සිංහල</button><button class="c" data-l="my" aria-pressed="false" lang="my">မြန်မာ</button></div>
+<div class="tr" aria-live="polite"><small>参考訳　AI で作ったものです</small><span id="trText" lang="en">Which of the following statements about the squish area formed by the cylinder head and the piston is appropriate?</span></div>
+</div><figcaption>アプリでの見え方（ふりがな・訳を切り替えられます）</figcaption></figure>
+</div>
+</div>
+</div></section>
+
+<section><div class="w">
+<p class="no">02</p>
+<div class="h">
+<div class="side"><h2 class="h2">作った人から</h2></div>
+<blockquote class="voice">
+<p class="ph">ここに、補習で実際に見た場面を2〜3文で入れます（社長の言葉。試作では空けています）。</p>
+<cite>整備士の学校で国家試験の補習を続けてきた教員</cite>
+</blockquote>
+</div>
+</div></section>
+
+<section class="p"><div class="w">
+<p class="no">03</p>
+<div class="h">
+<div class="side"><h2 class="h2">調べたいことから</h2><p class="small">ページの上でことばを選ぶと、母語の案内が読めます。日本語のページは「ふりがな」で読みを付けられます。</p></div>
+<div class="idx">
+<div><h3>試験</h3><ul>
+<li><a href="@/sogo.html">「総合」への変更と勉強のしかた</a></li>
+<li><a href="@/exam/k2.html">2級の学科試験　40問・80分</a></li>
+<li><a href="@/exam/k3.html">3級の学科試験　30問・60分</a></li>
+<li><a href="@/exam/k1.html">1級の学科試験　50問・100分</a></li>
+<li><a href="@/exam/foreign.html">日本語が母語でない人の勉強のしかた</a></li>
+<li><a href="@/exam/words.html">問題文によく出ることば 30語</a></li>
+</ul></div>
+<div><h3>アプリ</h3><ul>
+<li><a href="@/app/">できること・できないこと</a></li>
+<li><a href="@/app/contents.html">収録している問題と訳の範囲</a></li>
+<li><a href="@/app/price.html">無料の範囲と料金</a></li>
+</ul>
+<h3>学校・職場の方</h3><ul>
+<li><a href="@/school/">先生へのご案内</a></li>
+</ul>
+<h3>確かめたい方</h3><ul>
+<li><a href="@/about/editorial.html">作り方の決まり・AI の使い方</a></li>
+<li><a href="@/about/errata.html">誤りの報告と訂正</a></li>
+</ul></div>
+</div>
+</div>
+</div></section>
+
+<section><div class="w">
+<p class="no">04</p>
+<div class="h">
+<div class="side"><h2 class="h2">費用</h2><p class="small">お金を払うのは、予想問題を解いてみて、役に立つと思ったときだけで十分です。</p></div>
+<div>
+<ul class="cost">
+<li><span>過去問と解答を読む<small>日整連の「<a href="https://www.jaspa.or.jp/mechanic/past/" rel="noopener">過去の問題と解答</a>」で公開されています。ふりがな・訳・解説はありません</small></span><b>0円</b></li>
+<li><span>このサイトの情報と、5問の体験</span><b>0円</b></li>
+<li><span>アプリの「総合の予想問題」<small>各級に本番1回分。約9割は過去問、約1割は独自に作った問題です</small></span><b>0円</b></li>
+<li><span>アプリの級ごとの全問<small>1回だけの支払い。毎月の支払いはありません</small></span><b>980〜1,800円</b></li>
+</ul>
+<p class="small" style="margin-top:16px">3級 980円・2級 1,500円・1級 1,800円。iPhone・iPad のみ（Android は準備中で、時期は未定です）。<a href="{{STORE}}">App Store で見る</a></p>
+</div>
+</div>
+</div></section>
+
+<section class="p"><div class="w">
+<p class="no">05</p>
+<div class="h">
+<div class="side"><h2 class="h2">できないこと</h2></div>
+<ul class="cant">
+<li>合格の約束はできません</li>
+<li>Android ではまだ使えません</li>
+<li>実技と口述の練習はできません</li>
+<li>総合の試験の過去問は、まだどこにもありません</li>
+<li>学校でのまとめ買いの仕組みはありません</li>
+<li>訳は AI で作った参考です。日本語の問題文が正しいものです</li>
+</ul>
+</div>
+</div></section>
+</main>
+
+<footer><div class="w">
+<p>問題文・選択肢・正解は、問題用紙と正答表で照らし合わせています。日整連の公認・監修は受けていません。公開されている過去問にふりがな・訳・解説を付けて提供することについては、2026年10月に日整連へ書面で問い合わせ、許諾は不要との回答を得ています。</p>
+<p><a href="@/support.html">困ったとき</a>　<a href="@/privacy.html">プライバシー</a>　<a href="mailto:nosunosukawa@gmail.com">お問い合わせ</a>　© 2026 のす工房（Nosu Works）</p>
+</div></footer>
+<script>
+(function(){
+ var d=document.documentElement;
+ var rb=document.getElementById('t-ruby');function paint(){rb.setAttribute('aria-pressed',String(!d.classList.contains('noruby')))}paint();
+ rb.addEventListener('click',function(){var on=d.classList.contains('noruby');d.classList.toggle('noruby',!on);try{localStorage.setItem('ruby',on?'1':'0')}catch(e){}paint()});
+ var n=document.querySelector('[data-until]');var dd=Math.ceil((new Date('2027-03-14T00:00:00+09:00')-new Date())/864e5);if(dd>0)n.textContent='あと'+dd+'日';
+ var TR={en:"Which of the following statements about the squish area formed by the cylinder head and the piston is appropriate?",ne:"cylinder head र piston ले बनाउने squish area सम्बन्धी कथनहरूमध्ये उपयुक्त कुन हो?",zh:"关于由气缸盖和活塞形成的挤气区（squish area）的叙述，下列选项中恰当的是哪一项？",vi:"Về vùng nén ép (squish area) được tạo bởi nắp máy (cylinder head) và piston, nội dung nào sau đây phù hợp?",id:"Manakah pernyataan tentang area squish yang dibentuk oleh kepala silinder dan piston berikut ini yang tepat?",si:"cylinder head සහ piston මගින් සෑදෙන squish area පිළිබඳ ප්‍රකාශ අතරින් සුදුසු එක කුමක්ද?",my:"cylinder head နှင့် piston ဖြင့် ဖွဲ့စည်းထားသော squish area နှင့်ပတ်သက်သော ဖော်ပြချက်များအနက် သင့်လျော်သည့်အရာမှာ အောက်ပါတို့အနက် မည်သည်နည်း။"};
+ var card=document.getElementById('qcard'),qb=document.getElementById('q-ruby'),out=document.getElementById('trText');
+ qb.addEventListener('click',function(){var on=qb.getAttribute('aria-pressed')!=='true';qb.setAttribute('aria-pressed',String(on));card.classList.toggle('off',!on)});
+ document.getElementById('q-langs').addEventListener('click',function(e){var x=e.target.closest('button');if(!x)return;[].forEach.call(this.querySelectorAll('button'),function(y){y.setAttribute('aria-pressed',String(y===x))});out.textContent=TR[x.dataset.l];out.lang=x.dataset.l==='zh'?'zh-Hans':x.dataset.l});
+})();
+</script>
+</body></html>
