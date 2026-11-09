@@ -28,4 +28,20 @@
     var saved=get('wlang'),nav=(navigator.language||'').slice(0,2),first=saved||(['ne','zh','vi','id','si','my'].indexOf(nav)>=0?nav:'en');
     sel.value=first;show(first);sel.addEventListener('change',function(){set('wlang',sel.value);show(sel.value)});
   }
+
+  // 試験までの日数
+  [].forEach.call(document.querySelectorAll('[data-until]'),function(n){var t=new Date(n.dataset.until+'T00:00:00+09:00')-new Date(),dd=Math.ceil(t/864e5);if(dd>0)n.textContent=n.dataset.pre+dd+n.dataset.post});
+  // サイト内検索（サーバーへ送らない）
+  [].forEach.call(document.querySelectorAll('.search'),function(f){
+    var inp=f.querySelector('input'),box=f.querySelector('.sr'),root=f.dataset.root,idx=null;
+    function esc(s){return s.replace(/[&<]/g,function(c){return c==='&'?'&amp;':'&lt;'})}
+    function run(){var q=inp.value.trim().toLowerCase();if(!q){box.hidden=true;return}
+      var r=idx.map(function(p){var i=(p.t+' '+p.h).toLowerCase().indexOf(q)>=0?2:((p.d+' '+p.b).toLowerCase().indexOf(q)>=0?1:0);return [i,p]}).filter(function(x){return x[0]}).sort(function(a,b){return b[0]-a[0]}).slice(0,8);
+      box.innerHTML=r.length?r.map(function(x){return '<a href="'+root+x[1].u+'"><b>'+esc(x[1].t)+'</b><span>'+esc(x[1].d.slice(0,48))+'…</span></a>'}).join(''):'<p>'+f.dataset.none+'</p>';box.hidden=false}
+    function load(cb){if(idx)return cb();fetch(root+'assets/search.json').then(function(r){return r.json()}).then(function(j){idx=j;cb()}).catch(function(){box.innerHTML='<p>'+f.dataset.none+'</p>';box.hidden=false})}
+    inp.addEventListener('input',function(){load(run)});
+    f.addEventListener('submit',function(e){e.preventDefault();load(run)});
+    document.addEventListener('click',function(e){if(!f.contains(e.target))box.hidden=true});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')box.hidden=true});
+  });
 })();

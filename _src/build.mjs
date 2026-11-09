@@ -5,6 +5,7 @@ import kuromoji from 'kuromoji';
 const SRC=path.dirname(fileURLToPath(import.meta.url)),ROOT=path.dirname(SRC),BASE='https://nosunosukawa.github.io/seibisolo-site/';
 const STORE='https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&ct=lp&mt=8';
 const LANGS=[['ja','日本語','./'],['en','English','en.html'],['ne','नेपाली','lang/ne.html'],['zh-Hans','中文','lang/zh.html'],['vi','Tiếng Việt','lang/vi.html'],['id','Bahasa Indonesia','lang/id.html'],['si','සිංහල','lang/si.html'],['my','မြန်မာ','lang/my.html']];
+const SECTIONS=[{title:'試験を知る',items:[['試験を知る','exam/'],['総合への変更','sogo.html'],['2級の学科試験','exam/k2.html'],['3級の学科試験','exam/k3.html'],['1級の学科試験','exam/k1.html'],['母語が日本語でない人の勉強','exam/foreign.html'],['問題文によく出ることば','exam/words.html']]},{title:'アプリを知る',items:[['できること・できないこと','app/'],['収録している問題','app/contents.html'],['無料の範囲と料金','app/price.html'],['使い方','app/guide.html'],['実際の画面','screens.html']]},{title:'学校の先生へ',items:[['先生へのご案内','school/'],['印刷できる1枚','school/flyer.html']]},{title:'作り方と誤り',items:[['作っている人','about/'],['作り方の決まり','about/editorial.html'],['誤りの報告と訂正','about/errata.html'],['変更の記録','about/changelog.html'],['読みやすさの方針','about/accessibility.html']]},{title:'困ったとき',items:[['サポート','support.html'],['プライバシー','privacy.html']]}];
 const NAV=[['試験を知る','exam/'],['アプリを知る','app/'],['学校の先生へ','school/'],['作り方と誤り','about/'],['困ったとき','support.html']];
 const tok=await new Promise((ok,ng)=>kuromoji.builder({dicPath:path.join(SRC,'node_modules/kuromoji/dict')}).build((e,t)=>e?ng(e):ok(t)));
 const FIX=JSON.parse(fs.readFileSync(path.join(SRC,'data/ruby-fix.json'),'utf8'));
@@ -72,7 +73,7 @@ for(const f of walk(path.join(SRC,'pages')).filter(f=>f.endsWith('.html'))){
 const generated=fs.existsSync(path.join(SRC,'gen.mjs'))?(await import(path.join(SRC,'gen.mjs'))).default():[];
 all.push(...generated);
 const urlOf=o=>o.replace(/index\.html$/,'');
-const sitemap=[];
+const sitemap=[];const searchIndex=[];
 for(const pg of all){
   const {meta:M,out}=pg;const depth=out.split('/').length-1,up='../'.repeat(depth);
   const lang=M.lang||'ja',isJa=lang==='ja';
@@ -114,12 +115,13 @@ ${uiJa?`<script>(function(){var d=document.documentElement,r=null,f=null;try{r=l
 ${ld.length?`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':ld})}</script>`:''}
 </head>`;
   const skip=isJa?'本文へ移る':(M.skip||'Skip to content');
+  const search=uiJa?`<form class="search" role="search" data-root="@/" data-none="見つかりませんでした"><input type="search" aria-label="サイト内を検索" placeholder="サイト内を検索"><button type="submit">検索</button><div class="sr" hidden></div></form>`:'';
   const top=`<body>
 <a class="skip" href="#main">${skip}</a>
 <div class="lang-row"><div class="w"><ul>${langs}</ul></div></div>
 <header class="top"><div class="w top-in">
-<a class="brand" href="@/"><img src="@/img/icon.png" alt="" width="32" height="32"><span>ふりがな整備士</span></a>
-<div class="tools">${uiJa?`<button class="tool" id="t-ruby" type="button" aria-pressed="false"><span>ふりがな</span></button>`:''}<button class="tool" id="t-size" type="button" aria-pressed="false" aria-label="${uiJa?'文字を大きくする':(M.sizeLabel||'Text size')}" data-noruby><span>${uiJa?'文字＋':'A＋'}</span></button></div>
+<a class="brand" href="@/"><span>ふりがな整備士</span><small>${uiJa?'自動車整備士の学科試験の情報と、過去問アプリ':'Japan automotive mechanic exam: information and past-question app'}</small></a>
+<div class="tools">${search}${uiJa?`<button class="tool" id="t-ruby" type="button" aria-pressed="false"><span>ふりがな</span></button>`:''}<button class="tool" id="t-size" type="button" aria-pressed="false" aria-label="${uiJa?'文字を大きくする':(M.sizeLabel||'Text size')}" data-noruby><span>${uiJa?'文字＋':'A＋'}</span></button></div>
 </div></header>
 ${uiJa?`<nav class="nav" aria-label="サイトの案内"><div class="w"><ul>${nav}</ul></div></nav>`:''}`;
   const pageFoot=M.updated?`<div class="pagefoot">${isJa?`このページの更新日: ${M.updated}　・　<a href="@/about/errata.html">このページの誤りを知らせる</a>`:`${M.updatedLabel||'Last updated'}: ${M.updated} · <a href="mailto:nosunosukawa@gmail.com">${M.errLabel||'Report a mistake'}</a>`}</div>`:'';
@@ -133,17 +135,25 @@ ${uiJa?`<nav class="nav" aria-label="サイトの案内"><div class="w"><ul>${na
 </div>
 <p class="disc" data-noruby>このアプリとサイトは個人が作成したもので、一般社団法人 日本自動車整備振興会連合会（日整連）の公認・監修は受けていません。公開されている過去問にふりがな・訳・解説を付けて提供することについては、2026年10月に日整連へ書面で問い合わせ、許諾は不要との回答を得ています。試験の正式な情報は、日整連と各地の自動車整備振興会の発表で確かめてください。<br>© 2026 のす工房（Nosu Works）</p>
 </div></footer>`:`<footer class="foot"><div class="w"><p class="disc">${M.disc||'This app and site are made by an individual and are not endorsed or supervised by JASPA. In October 2026 we asked JASPA in writing about offering its published past questions with furigana, translations and explanations, and JASPA replied that permission is not required.'}<br>© 2026 Nosu Works · <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a></p></div></footer>`;
-  const width=M.wide?'w':'w read';
+  const sec=SECTIONS.find(x=>x.items.some(([,u])=>u===here));
+  const sideList=sec?sec.items.map(([t,u])=>`<li><a href="@/${u}"${u===here?' aria-current="page"':''}>${t}</a></li>`).join(''):'';
+  const side=sec?`<aside class="side" aria-label="${sec.title}のページ"><h2><a href="@/${sec.items[0][1]}">${sec.title}</a></h2><ul>${sideList}</ul></aside>`:'';
+  const sideM=sec?`<details class="side-m"><summary>${sec.title}のページ一覧</summary><ul>${sideList}</ul></details>`:'';
   const toc=M.toc&&isJa?(()=>{const hs=[...pg.body.matchAll(/<h2 id="([^"]+)"[^>]*>(.*?)<\/h2>/g)];return hs.length>2?`<nav class="toc" aria-label="このページの内容"><b>このページの内容</b><ul>${hs.map(h=>`<li><a href="#${h[1]}">${h[2]}</a></li>`).join('')}</ul></nav>`:''})():'';
-  let body=(M.notice?`<div class="notice"><div class="w">${M.notice}</div></div>`:'')+`<div class="${width}">${crumbHtml}<main id="main">${(M.h1?`<h1>${M.h1}</h1>`:'')}${toc}${pg.body}${pageFoot}</main></div>`;
+  let body;
+  if(M.full){body=`<main id="main">${pg.body}${pageFoot?`<div class="w">${pageFoot}</div>`:''}</main>`}
+  else{const inner=`${sideM}<main id="main">${(M.h1?`<h1>${M.h1}</h1>`:'')}${toc}${pg.body}${pageFoot}</main>`;
+    body=`<div class="w">${crumbHtml}${sec?`<div class="layout">${side}<div class="content">${inner}</div></div>`:`<div class="single">${inner}</div>`}</div>`}
   if(isJa){body=addRuby(body)}
   const navR=isJa?addRuby(top):top,footR=isJa?addRuby(foot):foot;
   let html=rel(head+'\n'+navR+'\n'+body+'\n'+footR+`\n<script src="@/assets/site.js" defer></script>\n</body></html>\n`).replaceAll(STORE,STORE);
   html=html.replaceAll('{{STORE}}',STORE);
+  if(isJa&&!M.noindex){const pl=x=>x.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');searchIndex.push({u:here,t:(M.short||M.title),d:M.desc,h:[...pg.body.matchAll(/<h[23][^>]*>(.*?)<\/h[23]>/g)].map(x=>pl(x[1])).join(' '),b:pl(pg.body).slice(0,1500)})}
   const dest=path.join(ROOT,out);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
   if(!M.noindex)sitemap.push(`<url><loc>${canon}</loc><lastmod>${M.updated||'2026-11-09'}</lastmod></url>`);
 }
 for(const [u,d] of [['demo.html','2026-11-07'],['sample-k1.html','2026-10-30'],['sample-k2.html','2026-10-30'],['sample-k3.html','2026-10-30']])sitemap.push(`<url><loc>${BASE}${u}</loc><lastmod>${d}</lastmod></url>`);
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'),`<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemap.join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(SRC,'ruby-audit.txt'),[...audit.entries()].sort().map(([a,b])=>a+'\t'+b).join('\n'));
+fs.writeFileSync(path.join(ROOT,'assets/search.json'),JSON.stringify(searchIndex));
 console.log('pages',all.length,'読みの種類',audit.size);
