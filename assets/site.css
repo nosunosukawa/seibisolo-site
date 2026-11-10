@@ -83,6 +83,8 @@ th{font-weight:700}
 thead th,tr:first-child>th[scope=col]{font-size:.85rem;color:var(--ink2)}
 th[scope=row]{width:30%;min-width:7em;color:var(--ink2);font-weight:700}
 td.n,th.n{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;padding-right:0}
+td.n:not(:last-child),th.n:not(:last-child){padding-right:20px}
+td.nw,th.nw,td[rowspan]{white-space:nowrap}
 caption{text-align:left;font-size:12.5px;color:var(--ink3);padding:0 0 8px;caption-side:top}
 .note,.info{padding:4px 0 4px 20px;margin:0 0 24px;border-left:3px solid}
 .note{border-color:var(--red)}
@@ -212,7 +214,7 @@ html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
 @media print{.top,.lang-row,.foot,.skip,.crumb,.side,.side-m{display:none}main{padding:0}.layout{display:block}html{--fs:13.5px}html:not(.noruby) body{line-height:1.8}h1{margin:0 0 6px;font-size:1.5rem}.pagefoot,[data-print-hide]{display:none}table{font-size:.92rem}th,td{padding:4px 8px 4px 0}}
 .brand small{display:block;margin:2px 0 0}
 .top-in{flex-wrap:nowrap}.nav{margin-left:auto}
-.search input{width:150px}
+@media(min-width:861px){.search input{width:150px}}
 @media(max-width:1060px){.top-in{flex-wrap:wrap}.tools{flex:1 1 100%;justify-content:flex-end}}
 @media(max-width:860px){.tools{justify-content:flex-start}}
 .search button{white-space:nowrap;flex:none}
