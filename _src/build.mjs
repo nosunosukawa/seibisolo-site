@@ -6,7 +6,7 @@ const SRC=path.dirname(fileURLToPath(import.meta.url)),ROOT=path.dirname(SRC),BA
 const STORE='https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&ct=lp&mt=8';
 const LANGS=[['ja','日本語','./'],['en','English','en.html'],['ne','नेपाली','lang/ne.html'],['zh-Hans','中文','lang/zh.html'],['vi','Tiếng Việt','lang/vi.html'],['id','Bahasa Indonesia','lang/id.html'],['si','සිංහල','lang/si.html'],['my','မြန်မာ','lang/my.html']];
 const SECTIONS=[{title:'試験を知る',items:[['試験を知る','exam/'],['総合への変更','sogo.html'],['2級の学科試験','exam/k2.html'],['3級の学科試験','exam/k3.html'],['1級の学科試験','exam/k1.html'],['母語が日本語でない人の勉強','exam/foreign.html'],['問題文によく出ることば','exam/words.html']]},{title:'アプリを知る',items:[['できること・できないこと','app/'],['収録している問題','app/contents.html'],['無料の範囲と料金','app/price.html'],['使い方','app/guide.html'],['実際の画面','screens.html']]},{title:'学校の先生へ',items:[['先生へのご案内','school/'],['印刷できる1枚','school/flyer.html']]},{title:'作り方と誤り',items:[['作っている人','about/'],['作り方の決まり','about/editorial.html'],['誤りの報告と訂正','about/errata.html'],['変更の記録','about/changelog.html'],['読みやすさの方針','about/accessibility.html']]},{title:'困ったとき',items:[['サポート','support.html'],['プライバシー','privacy.html']]}];
-const NAV=[['試験を知る','exam/'],['アプリを知る','app/'],['学校の先生へ','school/'],['作り方と誤り','about/'],['困ったとき','support.html']];
+const NAV=[['試験','exam/'],['アプリ','app/'],['先生へ','school/'],['作り方','about/'],['困ったとき','support.html']];
 const tok=await new Promise((ok,ng)=>kuromoji.builder({dicPath:path.join(SRC,'node_modules/kuromoji/dict')}).build((e,t)=>e?ng(e):ok(t)));
 const FIX=JSON.parse(fs.readFileSync(path.join(SRC,'data/ruby-fix.json'),'utf8'));
 const FIXK=Object.keys(FIX).sort((a,b)=>b.length-a.length);
@@ -111,7 +111,7 @@ ${hre}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6827350748">
 <link rel="icon" href="@/img/icon.png"><link rel="apple-touch-icon" href="@/img/icon.png">
-<link rel="stylesheet" href="@/assets/site.css">
+<link rel="stylesheet" href="@/assets/site.css?v=20261110b">
 ${uiJa?`<script>(function(){var d=document.documentElement,r=null,f=null;try{r=localStorage.getItem('ruby');f=localStorage.getItem('fs')}catch(e){}var ja=/^ja/i.test(navigator.language||'ja');if(r==='0'||(r===null&&ja))d.classList.add('noruby');if(f)d.classList.add(f)})()</script>`:`<script>(function(){try{var f=localStorage.getItem('fs');if(f)document.documentElement.classList.add(f)}catch(e){}})()</script>`}
 ${ld.length?`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':ld})}</script>`:''}
 </head>`;
@@ -121,10 +121,10 @@ ${ld.length?`<script type="application/ld+json">${JSON.stringify({'@context':'ht
 <a class="skip" href="#main">${skip}</a>
 <div class="lang-row"><div class="w"><ul>${langs}</ul></div></div>
 <header class="top"><div class="w top-in">
-<a class="brand" href="@/"><span>ふりがな整備士</span><small>${uiJa?'自動車整備士の学科試験の情報と、過去問アプリ':'Japan automotive mechanic exam: information and past-question app'}</small></a>
+<a class="brand" href="@/">ふりがな整備士<small>${uiJa?'自動車整備士 学科試験の情報と過去問アプリ':'Japan automotive mechanic exam'}</small></a>
+${uiJa?`<nav class="nav" aria-label="サイトの案内"><ul>${nav}</ul></nav>`:''}
 <div class="tools">${search}${uiJa?`<button class="tool" id="t-ruby" type="button" aria-pressed="false"><span>ふりがな</span></button>`:''}<button class="tool" id="t-size" type="button" aria-pressed="false" aria-label="${uiJa?'文字を大きくする':(M.sizeLabel||'Text size')}" data-noruby><span>${uiJa?'文字＋':'A＋'}</span></button></div>
-</div></header>
-${uiJa?`<nav class="nav" aria-label="サイトの案内"><div class="w"><ul>${nav}</ul></div></nav>`:''}`;
+</div></header>`;
   const pageFoot=M.updated?`<div class="pagefoot">${isJa?`このページの更新日: ${M.updated}　・　<a href="@/about/errata.html">このページの誤りを知らせる</a>`:`${M.updatedLabel||'Last updated'}: ${M.updated} · <a href="mailto:nosunosukawa@gmail.com">${M.errLabel||'Report a mistake'}</a>`}</div>`:'';
   const foot=isJa?`<footer class="foot"><div class="w">
 <div class="foot-g">
@@ -147,7 +147,7 @@ ${uiJa?`<nav class="nav" aria-label="サイトの案内"><div class="w"><ul>${na
     body=`<div class="w">${crumbHtml}${sec?`<div class="layout">${side}<div class="content">${inner}</div></div>`:`<div class="single">${inner}</div>`}</div>`}
   if(isJa){body=addRuby(body)}
   const navR=isJa?addRuby(top):top,footR=isJa?addRuby(foot):foot;
-  let html=rel(head+'\n'+navR+'\n'+body+'\n'+footR+`\n<script src="@/assets/site.js" defer></script>\n</body></html>\n`).replaceAll(STORE,STORE);
+  let html=rel(head+'\n'+navR+'\n'+body+'\n'+footR+`\n<script src="@/assets/site.js?v=20261110b" defer></script>\n</body></html>\n`).replaceAll(STORE,STORE);
   html=html.replaceAll('{{STORE}}',STORE);
   if(isJa&&!M.noindex){const pl=x=>x.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');searchIndex.push({u:here,t:(M.short||M.title),d:M.desc,h:[...pg.body.matchAll(/<h[23][^>]*>(.*?)<\/h[23]>/g)].map(x=>pl(x[1])).join(' '),b:pl(pg.body).slice(0,1500)})}
   const dest=path.join(ROOT,out);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
