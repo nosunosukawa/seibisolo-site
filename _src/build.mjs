@@ -111,7 +111,7 @@ ${hre}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6827350748">
 <link rel="icon" href="@/img/icon.png"><link rel="apple-touch-icon" href="@/img/icon.png">
-<link rel="stylesheet" href="@/assets/site.css?v=20261110b">
+<link rel="stylesheet" href="@/assets/site.css?v=20261110c">
 ${uiJa?`<script>(function(){var d=document.documentElement,r=null,f=null;try{r=localStorage.getItem('ruby');f=localStorage.getItem('fs')}catch(e){}var ja=/^ja/i.test(navigator.language||'ja');if(r==='0'||(r===null&&ja))d.classList.add('noruby');if(f)d.classList.add(f)})()</script>`:`<script>(function(){try{var f=localStorage.getItem('fs');if(f)document.documentElement.classList.add(f)}catch(e){}})()</script>`}
 ${ld.length?`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':ld})}</script>`:''}
 </head>`;
@@ -147,7 +147,7 @@ ${uiJa?`<nav class="nav" aria-label="サイトの案内"><ul>${nav}</ul></nav>`:
     body=`<div class="w">${crumbHtml}${sec?`<div class="layout">${side}<div class="content">${inner}</div></div>`:`<div class="single">${inner}</div>`}</div>`}
   if(isJa){body=addRuby(body)}
   const navR=isJa?addRuby(top):top,footR=isJa?addRuby(foot):foot;
-  let html=rel(head+'\n'+navR+'\n'+body+'\n'+footR+`\n<script src="@/assets/site.js?v=20261110b" defer></script>\n</body></html>\n`).replaceAll(STORE,STORE);
+  let html=rel(head+'\n'+navR+'\n'+body+'\n'+footR+`\n<script src="@/assets/site.js?v=20261110c" defer></script>\n</body></html>\n`).replaceAll(STORE,STORE);
   html=html.replaceAll('{{STORE}}',STORE);
   if(isJa&&!M.noindex){const pl=x=>x.replace(/<script[\s\S]*?<\/script>/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ');searchIndex.push({u:here,t:(M.short||M.title),d:M.desc,h:[...pg.body.matchAll(/<h[23][^>]*>(.*?)<\/h[23]>/g)].map(x=>pl(x[1])).join(' '),b:pl(pg.body).slice(0,1500)})}
   const dest=path.join(ROOT,out);fs.mkdirSync(path.dirname(dest),{recursive:true});fs.writeFileSync(dest,html);
