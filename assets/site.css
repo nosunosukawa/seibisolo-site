@@ -219,3 +219,4 @@ html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
 .voice{border-left:3px solid var(--red);padding:4px 0 4px 26px;margin:0}
 .voice p{font-size:clamp(17px,1.6vw,19.5px);line-height:2;margin:0 0 18px}
 .voice cite{font-style:normal;font-size:13px;color:var(--ink2)}
+.hside p{color:#333}
