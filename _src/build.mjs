@@ -111,7 +111,7 @@ ${hre}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="apple-itunes-app" content="app-id=6827350748">
 <link rel="icon" href="@/img/icon.png"><link rel="apple-touch-icon" href="@/img/icon.png">
-<link rel="stylesheet" href="@/assets/site.css?v=20261110e">
+<link rel="stylesheet" href="@/assets/site.css?v=20261110f">
 ${uiJa?`<script>(function(){var d=document.documentElement,r=null,f=null;try{r=localStorage.getItem('ruby');f=localStorage.getItem('fs')}catch(e){}var ja=/^ja/i.test(navigator.language||'ja');if(r==='0'||(r===null&&ja))d.classList.add('noruby');if(f)d.classList.add(f)})()</script>`:`<script>(function(){try{var f=localStorage.getItem('fs');if(f)document.documentElement.classList.add(f)}catch(e){}})()</script>`}
 ${ld.length?`<script type="application/ld+json">${JSON.stringify({'@context':'https://schema.org','@graph':ld})}</script>`:''}
 </head>`;

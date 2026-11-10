@@ -1,6 +1,6 @@
-/* ふりがな整備士 サイト共通（2026-11-10 試作Bの見た目）。白地・墨・朱1色・細い線。外部フォントなし */
+/* ふりがな整備士 サイト共通（2026-11-10 試作Bの見た目）。白地・墨・灰の線だけ（2026-11-10 社長「色味を抑える」。朱と生成りをやめた）。外部フォントなし */
 :root{
-  --ink:#141414;--ink2:#565656;--ink3:#8A8A8A;--line:#E6E4DF;--line2:#CFCBC2;--paper:#F6F4EF;--red:#C8381A;--red-s:#FBEDE8;--focus:#F5B400;
+  --ink:#141414;--ink2:#565656;--ink3:#8A8A8A;--line:#E5E5E5;--line2:#CCCCCC;--paper:#F7F7F7;--red:#141414;--red-s:#F2F2F2;--focus:#F5B400;
   --fs:17px;
   --ja:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP","Noto Sans CJK JP","BIZ UDPGothic","Yu Gothic UI","Meiryo",system-ui,sans-serif;
 }
@@ -9,7 +9,7 @@ html{-webkit-text-size-adjust:100%;font-size:var(--fs);scroll-padding-top:12px}
 html.fs-l{--fs:19px}html.fs-xl{--fs:22px}
 body{margin:0;background:#fff;color:var(--ink);font-family:var(--ja);font-size:1rem;line-height:1.85;letter-spacing:.02em;overflow-wrap:anywhere;line-break:strict}
 img{max-width:100%;height:auto;display:block}
-a{color:var(--ink);text-decoration:underline;text-decoration-color:#B9B6AE;text-underline-offset:.22em;text-decoration-thickness:1px}
+a{color:var(--ink);text-decoration:underline;text-decoration-color:#B5B5B5;text-underline-offset:.22em;text-decoration-thickness:1px}
 a:visited{color:var(--ink)}
 a:hover{text-decoration-color:var(--ink)}
 :focus-visible{outline:3px solid var(--focus);outline-offset:2px}
@@ -149,7 +149,6 @@ html:not(.noruby) .hero h1{line-height:1.6}
 .date dt{color:var(--ink2)}.date dd{margin:0}
 .src{font-size:12px;color:var(--ink3);margin:12px 0 0;line-height:1.7}
 .src a,.src a:visited{color:var(--ink3)}
-.desk{padding:0 0 64px}.desk figure{margin:0}.desk-art{display:block;width:100%;height:auto;border-radius:6px}.desk figcaption{font-size:12px;color:var(--ink3);margin-top:10px}
 .band{padding:88px 0;border-top:1px solid var(--line)}
 .band.p{background:var(--paper);border-top:0}
 .no{font-size:12.5px;color:var(--ink2);letter-spacing:.12em;margin:0 0 14px}
@@ -206,7 +205,6 @@ html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
  .h,.idx{grid-template-columns:1fr;gap:24px}
  .cant{columns:1}
  .band{padding:56px 0}
- .desk{padding:0 0 40px}.desk>.w{padding:0}.desk-art{border-radius:0}.desk figcaption{padding:0 20px}
  h2{margin-top:44px}
  .sr{left:0;right:auto;width:calc(100vw - 40px)}
 }
@@ -221,4 +219,5 @@ html[lang=en] body,html[lang=vi] body,html[lang=id] body{line-height:1.7}
 .voice{border-left:3px solid var(--red);padding:4px 0 4px 26px;margin:0}
 .voice p{font-size:clamp(17px,1.6vw,19.5px);line-height:2;margin:0 0 18px}
 .voice cite{font-style:normal;font-size:13px;color:var(--ink2)}
+.voice cite a,.voice cite a:visited{color:var(--ink2)}
 .hside p{color:#333}
