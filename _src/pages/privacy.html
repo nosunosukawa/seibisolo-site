@@ -19,6 +19,7 @@
 <li>点数・分野ごとの正解数・問題ごとの正誤・かかった時間</li>
 </ul>
 <p>名前・メールアドレス・広告 ID は送りません。ただし、Firebase の部品は通信のときに、IP アドレスと端末の種類・OS の版などを Google に送ります。Google はこれを不正の防止などに使い、IP アドレスは数週間で消すと説明しています。</p>
+<p>また、ホームにみんなで模試の日程を出すため、アプリは回の日程の一覧を Google の Firebase Hosting から読みます。このとき、アプリからは何も送りません。ただし、ふつうの Web の通信と同じく、IP アドレスなどの接続の記録が Google に残ることがあります。</p>
 <h3>ほかの参加者に見えるもの</h3>
 <p>順位表の画面に出るのは、受験番号・点数・時間です。全体の平均と問題ごとの正答率を端末の中で計算するため、ほかの参加者の端末には、受験番号ごとの分野ごとの正解数と問題ごとの正誤も届きます。名前とは結びつきません。</p>
 <h3>使い道</h3>
@@ -26,7 +27,7 @@
 <h3>置き場所</h3>
 <p>成績は Google の東京のデータセンター（Firestore）に置きます。匿名のログインは、Google が米国のデータセンターで処理します。</p>
 <h3>残す期間</h3>
-<p>2026年度の回（みんなで模試（プレ）・1月・2月）の成績と順位表は、総合の本番が終わった後の 2027年4月30日までに消します。匿名の ID も同じときに消します。</p>
+<p>2026年度の回（2027年3月の試験までに開く回）の成績と順位表は、総合の本番が終わった後の 2027年4月30日までに消します。匿名の ID も同じときに消します。</p>
 <h3>消したいとき</h3>
 <p>アプリの「設定」→「みんなで模試の記録を消す」で、成績・順位表の行・受験番号・匿名の ID を、いつでも消せます。消すと元に戻せず、その回の順位にも入りません。アプリを消してしまったなどでアプリから消せないときは、受験番号を書いて <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a> に知らせてください。14日以内に消して、お知らせします（受験番号だけで受け付けるため、本人かどうかは確かめられません）。</p>
 <h3>参加しないとき</h3>
@@ -45,7 +46,7 @@
 <p>変えるときは、このページに新しい日付で載せます。お問い合わせ: <a href="mailto:nosunosukawa@gmail.com">nosunosukawa@gmail.com</a></p>
 <h2 id="en" lang="en">English</h2>
 <p lang="en">The Furigana Seibishi app does not collect your study records, and it has no analytics or ads. Study records stay on your device and, if you turn on iCloud sync, in your own iCloud, which the developer cannot see. Purchases are processed by Apple.</p>
-<p lang="en"><strong>Mock Exam Together (みんなで模試).</strong> Only when you tap "Start" in the Mock Exam Together (held on fixed dates), the app sends the following to Google Firebase (a project used only for this app): a randomly assigned 5-digit exam number and an anonymous ID created by Firebase; the time you started and the time you submitted; your score, the number of correct answers per subject, per-question correctness, and the time taken. We do not send names, email addresses or advertising IDs. However, the Firebase software sends your IP address and basic device information (such as device type and OS version) to Google when it connects; Google says it uses this to prevent abuse and keeps IP addresses for a few weeks.</p>
+<p lang="en"><strong>Mock Exam Together (みんなで模試).</strong> Only when you tap "Start" in the Mock Exam Together (held on fixed dates), the app sends the following to Google Firebase (a project used only for this app): a randomly assigned 5-digit exam number and an anonymous ID created by Firebase; the time you started and the time you submitted; your score, the number of correct answers per subject, per-question correctness, and the time taken. We do not send names, email addresses or advertising IDs. However, the Firebase software sends your IP address and basic device information (such as device type and OS version) to Google when it connects; Google says it uses this to prevent abuse and keeps IP addresses for a few weeks. To show the schedule on the home screen, the app also reads the list of rounds from Google Firebase Hosting; it sends nothing, but as with any web request, Google may keep connection logs such as your IP address.</p>
 <p lang="en">The ranking screen shows exam numbers, scores and times. To calculate overall averages and per-question rates on the device, the per-subject results and per-question correctness for each exam number are also sent to other participants' devices. They are not linked to your name. We use this data only to show the ranking, averages and per-question rates, and to find and remove fraudulent records. We never use it for ads or analytics, and we never sell or give it to anyone. Results are stored in Google's Tokyo data center (Firestore); anonymous sign-in is processed by Google in the United States. We delete the 2026–27 results, rankings and anonymous IDs by April 30, 2027.</p>
 <p lang="en">To delete your data at any time, go to Settings &gt; "Delete my mock exam data" in the app. This deletes your results, your ranking entry, your exam number and your anonymous ID; it cannot be undone. If you can no longer do this in the app (for example, after deleting the app), email nosunosukawa@gmail.com with your exam number and we will delete it within 14 days and let you know (we accept requests by exam number only, so we cannot verify who you are). If you never tap "Start", no results are sent; viewing a ranking only downloads it and stores nothing.</p>
 <p lang="en">The website is hosted on GitHub Pages, which may process connection logs. It loads no third-party fonts, analytics or tracking tags. If you email us, we use your message only to reply and to fix problems. Contact: nosunosukawa@gmail.com.</p>
