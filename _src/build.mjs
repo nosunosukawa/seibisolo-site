@@ -5,7 +5,7 @@ import kuromoji from 'kuromoji';
 const SRC=path.dirname(fileURLToPath(import.meta.url)),ROOT=path.dirname(SRC),BASE='https://nosunosukawa.github.io/seibisolo-site/';
 const STORE='https://apps.apple.com/app/apple-store/id6827350748?pt=129256714&ct=lp&mt=8';
 const LANGS=[['ja','日本語','./'],['en','English','en.html'],['ne','नेपाली','lang/ne.html'],['zh-Hans','中文','lang/zh.html'],['vi','Tiếng Việt','lang/vi.html'],['id','Bahasa Indonesia','lang/id.html'],['si','සිංහල','lang/si.html'],['my','မြန်မာ','lang/my.html']];
-const SECTIONS=[{title:'試験を知る',items:[['試験を知る','exam/'],['総合への変更','sogo.html'],['2級の学科試験','exam/k2.html'],['3級の学科試験','exam/k3.html'],['1級の学科試験','exam/k1.html'],['母語が日本語でない人の勉強','exam/foreign.html'],['問題文によく出ることば','exam/words.html']]},{title:'アプリを知る',items:[['できること・できないこと','app/'],['収録している問題','app/contents.html'],['無料の範囲と料金','app/price.html'],['使い方','app/guide.html'],['実際の画面','screens.html']]},{title:'学校の先生へ',items:[['先生へのご案内','school/'],['印刷できる1枚','school/flyer.html']]},{title:'作り方と誤り',items:[['作っている人','about/'],['作り方の決まり','about/editorial.html'],['誤りの報告と訂正','about/errata.html'],['変更の記録','about/changelog.html'],['読みやすさの方針','about/accessibility.html']]},{title:'困ったとき',items:[['サポート','support.html'],['プライバシー','privacy.html']]}];
+const SECTIONS=[{title:'試験を知る',items:[['試験を知る','exam/'],['総合への変更','sogo.html'],['申込みのしかた','exam/apply.html'],['合格基準と合格率','exam/pass.html'],['2級の学科試験','exam/k2.html'],['3級の学科試験','exam/k3.html'],['1級の学科試験','exam/k1.html'],['母語が日本語でない人の勉強','exam/foreign.html'],['問題文によく出ることば','exam/words.html']]},{title:'アプリを知る',items:[['できること・できないこと','app/'],['収録している問題','app/contents.html'],['無料の範囲と料金','app/price.html'],['使い方','app/guide.html'],['実際の画面','screens.html']]},{title:'学校の先生へ',items:[['先生へのご案内','school/'],['印刷できる1枚','school/flyer.html']]},{title:'作り方と誤り',items:[['作っている人','about/'],['作り方の決まり','about/editorial.html'],['誤りの報告と訂正','about/errata.html'],['変更の記録','about/changelog.html'],['読みやすさの方針','about/accessibility.html']]},{title:'困ったとき',items:[['サポート','support.html'],['プライバシー','privacy.html']]}];
 const NAV=[['試験','exam/'],['アプリ','app/'],['先生へ','school/'],['作り方','about/'],['困ったとき','support.html']];
 const tok=await new Promise((ok,ng)=>kuromoji.builder({dicPath:path.join(SRC,'node_modules/kuromoji/dict')}).build((e,t)=>e?ng(e):ok(t)));
 const FIX=JSON.parse(fs.readFileSync(path.join(SRC,'data/ruby-fix.json'),'utf8'));
@@ -89,7 +89,7 @@ for(const pg of all){
   const langs=LANGS.map(([l,n,u])=>{const cur=(u==='./'?'':u)===here;return `<li lang="${l}"><a href="@/${u==='./'?'':u}"${cur?' class="now" aria-current="page"':''}>${n}</a></li>`}).join('');
   const ld=[];
   if(crumbs.length||here!==''){ld.push({'@type':'BreadcrumbList',itemListElement:[{name:nameHome,item:BASE},...crumbs.map(([t,u])=>({name:t,item:BASE+u})),{name:M.short||M.title,item:canon}].map((x,i)=>({'@type':'ListItem',position:i+1,...x}))})}
-  if(M.article)ld.push({'@type':'Article',headline:M.title,dateModified:M.updated,inLanguage:lang,author:{'@type':'Organization',name:'のす工房（Nosu Works）'},publisher:{'@type':'Organization',name:'のす工房（Nosu Works）'}});
+  if(M.article)ld.push({'@type':'Article',headline:M.title,...(M.published?{datePublished:M.published}:{}),dateModified:M.updated,inLanguage:lang,mainEntityOfPage:canon,image:BASE+'img/og.png',author:{'@type':'Organization',name:'のす工房（Nosu Works）'},publisher:{'@type':'Organization',name:'のす工房（Nosu Works）'}});
   if(M.ld)ld.push(...M.ld);
   const uiJa=isJa;
   const head=`<!doctype html>
@@ -128,7 +128,7 @@ ${uiJa?`<nav class="nav" aria-label="サイトの案内"><ul>${nav}</ul></nav>`:
   const pageFoot=M.updated?`<div class="pagefoot">${isJa?`このページの更新日: ${M.updated}　・　<a href="@/about/errata.html">このページの誤りを知らせる</a>`:`${M.updatedLabel||'Last updated'}: ${M.updated} · <a href="mailto:nosunosukawa@gmail.com">${M.errLabel||'Report a mistake'}</a>`}</div>`:'';
   const foot=isJa?`<footer class="foot"><div class="w">
 <div class="foot-g">
-<div><h2>試験を知る</h2><ul><li><a href="@/sogo.html">総合への変更</a></li><li><a href="@/exam/k2.html">2級の試験</a></li><li><a href="@/exam/k3.html">3級の試験</a></li><li><a href="@/exam/k1.html">1級の試験</a></li><li><a href="@/exam/foreign.html">母語が日本語でない人の勉強</a></li><li><a href="@/exam/words.html">問題文によく出ることば</a></li></ul></div>
+<div><h2>試験を知る</h2><ul><li><a href="@/sogo.html">総合への変更</a></li><li><a href="@/exam/apply.html">申込みのしかた</a></li><li><a href="@/exam/pass.html">合格基準と合格率</a></li><li><a href="@/exam/k2.html">2級の試験</a></li><li><a href="@/exam/k3.html">3級の試験</a></li><li><a href="@/exam/k1.html">1級の試験</a></li><li><a href="@/exam/foreign.html">母語が日本語でない人の勉強</a></li><li><a href="@/exam/words.html">問題文によく出ることば</a></li></ul></div>
 <div><h2>アプリを知る</h2><ul><li><a href="@/app/">できること・できないこと</a></li><li><a href="@/app/contents.html">収録している問題</a></li><li><a href="@/app/price.html">無料の範囲と料金</a></li><li><a href="@/app/guide.html">使い方</a></li><li><a href="@/screens.html">画面</a></li><li><a href="@/demo.html">5問を体験する</a></li></ul></div>
 <div><h2>学校・職場の方へ</h2><ul><li><a href="@/school/">先生へのご案内</a></li><li><a href="@/school/flyer.html">印刷できる1枚</a></li></ul></div>
 <div><h2>作り方と誤り</h2><ul><li><a href="@/about/">作っている人</a></li><li><a href="@/about/editorial.html">作り方の決まり</a></li><li><a href="@/about/errata.html">誤りの報告と訂正</a></li><li><a href="@/about/changelog.html">変更の記録</a></li><li><a href="@/about/accessibility.html">読みやすさの方針</a></li></ul></div>
